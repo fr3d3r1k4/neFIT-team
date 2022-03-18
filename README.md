@@ -6,14 +6,16 @@ Windows 64bit
 
 Autori
 ------
+- xjanco09 Samuel Janco 
+- xkmeto00 Frederika Kmetova 
+- xplank03 Filip Planka 
+- xdurac01 Romana Duraciova 
 
 Nazev tymu
-- xlogin01 jmeno prijmeni 
-- xlogin02 jmeno prijmeni 
-- xlogin03 jmeno prijmeni 
-- xlogin04 jmeno prijmeni 
+----------
+neFIT team
 
 Licence
 -------
 
-Tento program je poskytovan...
+Tento program je poskytovan pod licenci GNU GPL v.3
