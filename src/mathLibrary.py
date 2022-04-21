@@ -5,13 +5,13 @@ import math
 
 def addition(a, b):
     result = a + b
-    round(result)
+    result = round(result, 2)
     return result
 
 
 def subtraction(a, b):
     result = a - b
-    round(result)
+    result = round(result, 2)
     return result
 
 
@@ -23,9 +23,12 @@ def multiplication(a, b):
 # TODO: osetrit delenie nulou na errorovy vystup, nie trapny print
 def division(a, b):
     if b == 0:
-        print("Error: Division by zero")
+        raise ZeroDivisionError("Division by zero!")
     else:
         result = a / b
         return result
+
+
+division(45, 0)
 
 # ------ End of file mathLibrary.py ------
