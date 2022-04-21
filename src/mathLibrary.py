@@ -5,11 +5,13 @@ import math
 
 def addition(a, b):
     result = a + b
+    round(result)
     return result
 
 
 def subtraction(a, b):
     result = a - b
+    round(result)
     return result
 
 
