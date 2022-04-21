@@ -33,7 +33,6 @@ def multiplication(a, b):
     return result
 
 
-# TODO: osetrit delenie nulou na errorovy vystup, nie trapny print
 def division(a, b):
     if b == 0:
         raise ZeroDivisionError("Division by zero!")
