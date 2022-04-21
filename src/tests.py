@@ -10,7 +10,7 @@
 # @author ROMANA DURACIOVA
 #
 # @brief Implementation of tests for calculator and math library.
-
+import pytest
 
 import mathLibrary
 
@@ -47,6 +47,39 @@ def test_subtraction():
     assert mathLibrary.subtraction(0.23, 0.6) == -0.37
     assert mathLibrary.subtraction(-0.77, 0.54) == -1.31
     assert mathLibrary.subtraction(0.4, -0.63) == 1.03
+
+
+def test_multiplication():
+    # positive numbers
+    assert mathLibrary.multiplication(6, 4) == 24
+    # negative numbers
+    assert mathLibrary.multiplication(-8, -7) == 56
+    # positive * negative number
+    assert mathLibrary.multiplication(-12, 5) == -60
+    # multiple by zero
+    assert mathLibrary.multiplication(478, 0) == 0
+    assert mathLibrary.multiplication(0, 542) == 0
+    # decimal numbers
+    assert mathLibrary.multiplication(0.4, 3) == 1.2
+    assert mathLibrary.multiplication(0.23, 0.47) == 0.1081
+    assert mathLibrary.multiplication(-0.5437, 0.8076) == -0.43909212
+    # big numbers
+    assert mathLibrary.multiplication(34590, 1368) == 47319120
+
+
+def test_division():
+    # positive numbers
+    assert mathLibrary.division(64, 8) == 8
+    # negative numbers
+    assert mathLibrary.division(-81, -9) == 9
+    # positive, negative number combination
+    assert mathLibrary.division(-44, 11) == -4
+    assert mathLibrary.division(44, -11) == -4
+    # divide by zero
+    with pytest.raises(ZeroDivisionError):
+        mathLibrary.division(32, 0)
+        mathLibrary.division(245.80, 0)
+        mathLibrary.division(-99, 0)
 
 
 # ------ End of file tests.py ------
