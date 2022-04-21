@@ -9,7 +9,7 @@
 # @file mathLibrary.py
 # @author ROMANA DURACIOVA, FILIP PLANKA
 #
-# @brief Implementace metod tridy prioritni fronty.
+# @brief Implementation of mathematical operations for calculator.
 
 
 import math
