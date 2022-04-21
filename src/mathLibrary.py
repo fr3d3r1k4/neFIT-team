@@ -17,6 +17,7 @@ def subtraction(a, b):
 
 def multiplication(a, b):
     result = a * b
+    result = round(result, 8)
     return result
 
 
@@ -26,9 +27,8 @@ def division(a, b):
         raise ZeroDivisionError("Division by zero!")
     else:
         result = a / b
+        result = round(result, 4)
         return result
 
-
-division(45, 0)
 
 # ------ End of file mathLibrary.py ------
