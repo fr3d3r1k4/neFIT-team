@@ -23,8 +23,10 @@ class Calculator:
     def run(self):
         self.window.mainloop()
 
-        
-#running calculator
+
+# running calculator
 if __name__ == "__main__":
     calc = Calculator()
     calc.run()
+
+# ------ End of file calc_GUI.py ------
