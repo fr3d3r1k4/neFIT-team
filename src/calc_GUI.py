@@ -2,7 +2,7 @@
 #
 # Purpose:     GUI for calculator
 #
-# $Author:     FREDERIKA KMETOVA <xxkmeto00@stud.fit.vutbr.cz>
+# $Author:     FREDERIKA KMETOVA <xkmeto00@stud.fit.vutbr.cz>
 # $Date:       $2022-04-28
 # ============================================================================//
 #
@@ -71,11 +71,11 @@ class Calculator:
 
     def make_buttons_display(self):
         for numbers, grid_value in self.numbers.items():
-            button = Button(self.buttons_part, text=str(numbers), bg=BUTTONS_FRAME, fg=BUTTONS_COLOR,
+            button = Button(self.buttons_part, text=str(numbers), bg=BUTTONS_FRAME, fg=NUMBERS_COLOR,
                                font=NUMBERS_FONT, borderwidth=0)
             button.grid(row=grid_value[0], column=grid_value[1], sticky=NSEW)
         for operators, grid_value in self.operators.items():
-            button = Button(self.buttons_part, text=str(operators), bg=BUTTONS_FRAME, fg=OPERATORS_COLOR,
+            button = Button(self.buttons_part, text=str(operators), bg=OPERATORS_COLOR, fg=OPERATORS_COLOR,
                                font=NUMBERS_FONT, borderwidth=0)
             button.grid(row=grid_value[0], column=grid_value[1], sticky=NSEW)
 
