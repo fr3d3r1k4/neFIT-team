@@ -11,9 +11,8 @@
 #
 # @brief Implementation of GUI for calculator.
 
-import tkinter as tk
-import mathLibrary
-
+from tkinter import *
+from mathLibrary import *
 # font sizes
 NUMBERS_FONT = ("Courier New", 35)
 EQUATIONS_FONT = ("Courier New", 20)
@@ -28,13 +27,11 @@ OPERATORS_COLOR = "#c09175"
 # class calculator
 class Calculator:
     def __init__(self):
-        self.calculator = tk.Tk()
+        self.calculator = Tk()
         self.calculator.geometry("800x500")
         self.calculator.title("Calculator: by neFIT Team")
         self.calculator.configure(bg=DISPLAY_COLOR)
         self.display = self.make_display()
-        self.every_expression = ""
-        self.current_expression = ""
         self.numbers = {
             7: (1, 3), 8: (1, 4), 9: (1, 5),
             4: (2, 3), 5: (2, 4), 6: (2, 5),
@@ -50,33 +47,38 @@ class Calculator:
         self.buttons_part = self.make_buttons_part()
         self.make_buttons_display()
         self.buttons_part.rowconfigure(0, weight=0)
-        for x in range(1, 8):
-            self.buttons_part.rowconfigure(x, weight=1)
-            self.buttons_part.columnconfigure(x, weight=1)
+        for index in range(1, 8):
+            n = self.numbers[index]
+            self.buttons_part.rowconfigure(index, weight=1)
+            self.buttons_part.columnconfigure(index, weight=1)
 
 # running calculator
     def run(self):
         self.calculator.mainloop()
 
     def make_display(self):
-        display = tk.Frame(self.calculator, bg=DISPLAY_COLOR)
+        display = Frame(self.calculator, bg=DISPLAY_COLOR)
         display.pack(expand=True, fill="both")
-        return display
+        numbers = StringVar()
+        results = Entry(display, textvariable=numbers, bg=DISPLAY_COLOR)
+        results.pack(expand=True, fill="both")
+        return results
 
     def make_buttons_part(self):
-        button = tk.Button(self.calculator, bg=KEYBOARD_COLOR)
+        button = Button(self.calculator, bg=KEYBOARD_COLOR)
         button.pack(expand=True, fill="both")
         return button
 
     def make_buttons_display(self):
         for numbers, grid_value in self.numbers.items():
-            button = tk.Button(self.buttons_part, text=str(numbers), bg=BUTTONS_FRAME, fg=BUTTONS_COLOR,
+            button = Button(self.buttons_part, text=str(numbers), bg=BUTTONS_FRAME, fg=BUTTONS_COLOR,
                                font=NUMBERS_FONT, borderwidth=0)
-            button.grid(row=grid_value[0], column=grid_value[1], sticky=tk.NSEW)
+            button.grid(row=grid_value[0], column=grid_value[1], sticky=NSEW)
         for operators, grid_value in self.operators.items():
-            button = tk.Button(self.buttons_part, text=str(operators), bg=BUTTONS_FRAME, fg=OPERATORS_COLOR,
+            button = Button(self.buttons_part, text=str(operators), bg=BUTTONS_FRAME, fg=OPERATORS_COLOR,
                                font=NUMBERS_FONT, borderwidth=0)
-            button.grid(row=grid_value[0], column=grid_value[1], sticky=tk.NSEW)
+            button.grid(row=grid_value[0], column=grid_value[1], sticky=NSEW)
+
 
 
 # running calculator
