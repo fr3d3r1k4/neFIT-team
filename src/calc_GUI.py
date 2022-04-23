@@ -57,12 +57,10 @@ class Calculator:
         self.calculator.mainloop()
 
     def make_display(self):
-        display = Frame(self.calculator, bg=DISPLAY_COLOR)
-        display.pack(expand=True, fill="both")
         numbers = StringVar()
-        results = Entry(display, textvariable=numbers, bg=DISPLAY_COLOR)
-        results.pack(expand=True, fill="both")
-        return results
+        display = Entry(self.calculator, textvariable=numbers, bg=DISPLAY_COLOR)
+        display.pack(expand=True, fill="both")
+        return display
 
     def make_buttons_part(self):
         button = Button(self.calculator, bg=KEYBOARD_COLOR)
