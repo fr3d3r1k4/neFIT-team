@@ -21,6 +21,7 @@ NUMBERS_COLOR = "black"
 DISPLAY_COLOR = "#ddc0b4"
 KEYBOARD_COLOR = "#d1ae9b"
 BUTTONS_COLOR = "black"
+BUTTONS_FRAME = "#aa6f5d"
 OPERATORS_COLOR = "#c09175"
 
 
@@ -68,12 +69,12 @@ class Calculator:
 
     def make_buttons_display(self):
         for numbers, grid_value in self.numbers.items():
-            button = tk.Button(self.buttons_part, text=str(numbers), bg="#aa6f5d", fg=BUTTONS_COLOR,
-                               font=NUMBERS_FONT, borderwidth=0,)
+            button = tk.Button(self.buttons_part, text=str(numbers), bg=BUTTONS_FRAME, fg=BUTTONS_COLOR,
+                               font=NUMBERS_FONT, borderwidth=0)
             button.grid(row=grid_value[0], column=grid_value[1], sticky=tk.NSEW)
         for operators, grid_value in self.operators.items():
-            button = tk.Button(self.buttons_part, text=str(operators), bg="#aa6f5d", fg=OPERATORS_COLOR,
-                               font=NUMBERS_FONT, borderwidth=0,)
+            button = tk.Button(self.buttons_part, text=str(operators), bg=BUTTONS_FRAME, fg=OPERATORS_COLOR,
+                               font=NUMBERS_FONT, borderwidth=0)
             button.grid(row=grid_value[0], column=grid_value[1], sticky=tk.NSEW)
 
 
