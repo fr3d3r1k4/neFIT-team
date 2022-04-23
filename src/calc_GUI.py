@@ -1,5 +1,18 @@
-#import
+# ======== Copyright (c) 2021, FIT VUT Brno, All rights reserved. ============//
+#
+# Purpose:     GUI for calculator
+#
+# $Author:     FREDERIKA KMETOVA <xxkmeto00@stud.fit.vutbr.cz>
+# $Date:       $2022-04-28
+# ============================================================================//
+#
+# @file calc_GUI.py
+# @author FREDERIKA KMETOVA
+#
+# @brief Implementation of GUI for calculator.
+
 import tkinter as tk
+import mathLibrary
 
 # font sizes
 NUMBERS_FONT = ("Courier New", 35)
@@ -22,16 +35,16 @@ class Calculator:
         self.every_expression = ""
         self.current_expression = ""
         self.numbers = {
-            0: (4, 4),
-            1: (3, 3), 2: (3, 4), 3: (3, 5),
-            4: (2, 3), 5: (2, 4), 6: (2, 5),
             7: (1, 3), 8: (1, 4), 9: (1, 5),
+            4: (2, 3), 5: (2, 4), 6: (2, 5),
+            1: (3, 3), 2: (3, 4), 3: (3, 5),
+            0: (4, 4),
         }
         self.operators = {
-            'x\u207f': (3, 1), 'x²': (3, 2), '/': (3, 6), '*': (3, 7),
-            'C': (1, 7), 'DEL': (1, 6), '(': (1, 2), ')': (1, 1),
-            'TAN': (4, 3), 'COS': (4, 2), 'SIN': (4, 1), '.': (4, 5), '!': (4, 6), '=': (4, 7),
-            '\u207f√': (2, 1), "\u00b2√": (2, 2), '+': (2, 6), '-': (2, 7),
+            '(': (1, 1), ')': (1, 2),  'DEL': (1, 6), 'C': (1, 7),
+            '\u207f√': (2, 1), "\u00b2√": (2, 2), '/': (2, 6), '+': (2, 7),
+            'x\u207f': (3, 1), 'x²': (3, 2), '*': (3, 6), '-': (3, 7),
+            'SIN': (4, 1), 'COS': (4, 2), 'TAN': (4, 3), '.': (4, 5), '!': (4, 6), '=': (4, 7),
         }
         self.buttons_part = self.make_buttons_part()
         self.make_buttons_display()
@@ -49,7 +62,7 @@ class Calculator:
         return display
 
     def make_buttons_part(self):
-        button = tk.Frame(self.calculator, bg=KEYBOARD_COLOR)
+        button = tk.Button(self.calculator, bg=KEYBOARD_COLOR)
         button.pack(expand=True, fill="both")
         return button
 
