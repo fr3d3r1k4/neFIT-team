@@ -19,7 +19,7 @@ class Calculator:
         self.calculator.title("Calculator: by neFIT Team")
         self.calculator.configure(bg=DISPLAY_COLOR)
         self.display = self.make_display()
-        self.total_expression = ""
+        self.every_expression = ""
         self.current_expression = ""
         self.numbers = {
             0: (4, 4),
