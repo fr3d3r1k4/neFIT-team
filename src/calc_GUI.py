@@ -54,6 +54,7 @@ class Calculator:
             self.buttons_part.rowconfigure(x, weight=1)
             self.buttons_part.columnconfigure(x, weight=1)
 
+# running calculator
     def run(self):
         self.calculator.mainloop()
 
