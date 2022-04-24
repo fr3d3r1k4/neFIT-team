@@ -16,7 +16,7 @@ from GUI import *
 
 DISPLAY_COLOR = "#ddc0b4"
 KEYBOARD_COLOR = "#d1ae9b"
-NUMBERS_COLOR = "black"
+NUMBERS_COLOR = "white"
 NUMBERS_FONT = ("Courier New", 30)
 OPERATORS_FONT = ("Courier New", 20)
 OPERATORS_COLOR = "#c09175"
