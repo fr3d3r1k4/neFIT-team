@@ -22,7 +22,7 @@ def number(value):
     return False
 
 
-def solving(operator, a, b):
+def solving_operands2(operator, a, b):
     if operator == '*':
         return mth.multiplication(a, b)
     elif operator == '/':
@@ -33,6 +33,10 @@ def solving(operator, a, b):
 
     elif operator == '-':
         return mth.subtraction(a, b)
+
+
+def solving_operands(value):
+    return True
 
 
 def is_numeric(value):
@@ -103,92 +107,89 @@ def tuple_string(input_str):
     return result
 
 
-def calculate_value(value):
+def calculate_value(expression):
+    # value: type of instruction
+    # key: number of operands
     instructions = {'s': 1, 'c': 1, 't': 1, 'g': 1, 'r': 2, '^': 2, '!': 1, '*': 2, '/': 2, '+': 2, '-': 2}
     before_minus = ('(', '', '+', '/', '-', '*')
+
     for symbol, count in instructions.items():
         i = 0
-        while i < len(value):
-            if (i - 1 >= 0 and value[i] == '-' and value[i - 1] in before_minus) \
-                    or i == 0 and value[i] == '-':
-                value[i + 1] = -value[i + 1]
-                value.pop(i)
-            if value[i] == symbol:
+
+        while i < len(expression):
+            if (i - 1 >= 0 and expression[i] == '-' and expression[i - 1] in before_minus) \
+                    or i == 0 and expression[i] == '-':
+                expression[i + 1] = -expression[i + 1]
+                expression.pop(i)
+
+            if expression[i] == symbol:
+
                 if count == 1:
-                    result = solving(symbol, value[i - 1])
+                    result = solving_operands(symbol, expression[i - 1])
+
                     if result is ValueError:
                         return False
-                    value[i - 1] = result
-                    value.pop(i)
+
+                    expression[i - 1] = result
+                    expression.pop(i)
+
                 elif count == 2:
-                    result = solving(symbol, value[i - 1], value[i + 1])
+                    result = solving_operands2(symbol, expression[i - 1], expression[i + 1])
+
                     if result is ValueError:
                         return False
-                    value[i - 1] = result
 
-                    value.pop(i)
-                    value.pop(i)
+                    expression[i - 1] = result
+
+                    expression.pop(i)
+                    expression.pop(i)
                     i -= 1
+
             i += 1
-    return value
-
-
-def brackets_one_two(expression):
-    used_bracket = False
-    cut_result = []
-    cnt_bracket = 0
-    i = 0
-    new_result = []  # Final result
-
-    while i < len(expression):
-        if expression[i] == '(':
-            used_bracket = True
-
-            if cnt_bracket:
-                cut_result.append('(')
-
-            cnt_bracket += 1
-
-        elif expression[i] == ')':
-            cnt_bracket -= 1
-
-            if not cnt_bracket:
-
-                # call priority_brackets function to simplify expression
-                new_result += brackets_one_two(cut_result)
-                cut_result = []
-                used_bracket = False
-
-            else:
-                cut_result.append(')')
-
-        elif used_bracket:
-            cut_result.append(expression[i])
-
-        else:
-            new_result.append(expression[i])
-
-        i += 1
-
-    return calculate_value(new_result)
-
-
-def solve(expression):
-    # convert string to tuple
-    expression = tuple_string(expression)
-
-    if expression is False:
-        return False
-
-
-    # Finally calculate the expression
-    expression = brackets_one_two(expression)
-    if expression is False:
-        return False
-
-    # Convert to int or float
-    expression = expression[0]
-    if int(expression) - float(expression) == 0:
-        expression = int(expression)
 
     return expression
+
+
+def brackets_one_two(value):
+    brackets = False
+    first_result = []
+    counter = 0
+    i = 0
+    result = []
+    while i < len(value):
+        if value[i] == '(':
+            brackets = True
+            if counter:
+                first_result.append('(')
+            counter += 1
+        elif value[i] == ')':
+            counter -= 1
+            if not counter:
+                result += brackets_one_two(first_result)
+                first_result = []
+                brackets = False
+            else:
+                first_result.append(')')
+        elif brackets:
+            first_result.append(value[i])
+        else:
+            result.append(value[i])
+        i += 1
+    return calculate_value(result)
+
+
+def solve(value):
+    # convert string to tuple
+    value = tuple_string(value)
+    if value is False:
+        return False
+    value = brackets_one_two(value)
+    if value is False:
+        return False
+    # Convert to int or float
+    value = value[0]
+    if isinstance(value, int) == 0:
+        value = int(value)
+    elif isinstance(value, float) == 0:
+        value = int(value)
+    return value
