@@ -42,41 +42,52 @@ def equals():
     entry = display_entry.get()
     entry = GUI.solve(entry)
     if entry is False:
-        entry = "Invalid input"
+        entry = "Invalid input."
     display_entry.delete(0, END)
     display_entry.insert(0, str(entry))
 
+
+def wrong_input():
+    if display_entry.get() == "Invalid input.":
+        display_entry.delete(0, END)
 
 # ========================== FIRST ROW ===========================
 
 
 def seven():
+    wrong_input()
     display_entry.insert(END, "7")
 
 
 def eight():
+    wrong_input()
     display_entry.insert(END, "8")
 
 
 def nine():
+    wrong_input()
     display_entry.insert(END, "9")
 
 
 def bracket1():
+    wrong_input()
     display_entry.insert(END, "(")
 
 
 def bracket2():
+    wrong_input()
     display_entry.insert(END, ")")
 
 
 def help_me():
+    wrong_input()
     help = Tk()
     help_button = Label(help, text="long help that i will do later")
     help_button.pack()
 
 
 def delete_all():
+    wrong_input()
     display_entry.delete(len(display_entry.get()) - 1, END)
 
 
@@ -114,30 +125,37 @@ button_c.grid(row=1, column=7, padx=1, pady=1)
 
 
 def n_radical():
+    wrong_input()
     display_entry.insert(END, "\u207f√")
 
 
 def radical():
+    wrong_input()
     display_entry.insert(END, "\u00b2√")
 
 
 def four():
+    wrong_input()
     display_entry.insert(END, "4")
 
 
 def five():
+    wrong_input()
     display_entry.insert(END, "5")
 
 
 def six():
+    wrong_input()
     display_entry.insert(END, "6")
 
 
 def divide():
+    wrong_input()
     display_entry.insert(END, "/")
 
 
 def plus():
+    wrong_input()
     display_entry.insert(END, "+")
 
 
@@ -175,30 +193,37 @@ button_plus.grid(row=2, column=7, padx=1, pady=1)
 
 
 def n_square():
+    wrong_input()
     display_entry.insert(END, "x\u207f")
 
 
 def square():
+    wrong_input()
     display_entry.insert(END, "x²")
 
 
 def one():
+    wrong_input()
     display_entry.insert(END, "1")
 
 
 def two():
+    wrong_input()
     display_entry.insert(END, "2")
 
 
 def three():
+    wrong_input()
     display_entry.insert(END, "3")
 
 
 def multiply():
+    wrong_input()
     display_entry.insert(END, "*")
 
 
 def minus():
+    wrong_input()
     display_entry.insert(END, "-")
 
 
@@ -235,26 +260,32 @@ button_minus.grid(row=3, column=7, padx=1, pady=1)
 
 
 def sin():
+    wrong_input()
     display_entry.insert(END, "sin(")
 
 
 def cos():
+    wrong_input()
     display_entry.insert(END, "cos(")
 
 
 def tan():
+    wrong_input()
     display_entry.insert(END, "tan(")
 
 
 def zero():
+    wrong_input()
     display_entry.insert(END, "0")
 
 
 def dot():
+    wrong_input()
     display_entry.insert(END, ".")
 
 
 def factorial():
+    wrong_input()
     display_entry.insert(END, "!")
 
 
