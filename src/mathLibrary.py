@@ -47,7 +47,7 @@ def cosinus(value):
 
 def tangens(value):
 
-def factorial(value):
+def factorial(a):
 
 
 # ------ End of file mathLibrary.py ------
