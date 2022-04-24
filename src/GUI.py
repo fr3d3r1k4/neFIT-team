@@ -15,10 +15,9 @@ import mathLibrary as mth
 
 
 def number(value):
-    if type(value) == int:
+    if isinstance(value, int):
         return True
-
-    elif type(value) == float:
+    elif isinstance(value, float):
         return True
     return False
 
