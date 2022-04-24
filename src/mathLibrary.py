@@ -1,15 +1,9 @@
-# ============================================================================
-#
-# Purpose:     Math library for calculator
-#
-# $Author:     ROMANA DURACIOVA <xdurac01@stud.fit.vutbr.cz>, FILIP PLANKA <xplank03@stud.fit.vutbr.cz>
-# $Date:       $2022-04-28
-# ============================================================================
-#
-# @file mathLibrary.py
-# @author ROMANA DURACIOVA, FILIP PLANKA
-#
-# @brief Implementation of mathematical operations for calculator.
+
+
+##  @file mathLibrary.py
+#   @brief Implementation of mathematical operations for calculator.
+#   @author ROMANA DURACIOVA, FILIP PLANKA
+#   @date 2022-04-28
 
 
 import math
@@ -18,21 +12,21 @@ import math
 def addition(a, b):
     result: float = 0.0
     result = float(a) + float(b)
-    result = round(result, 2)
+    #result = round(result, 2)
     return result
 
 
 def subtraction(a, b):
     result: float = 0.0
     result = float(a) - float(b)
-    result = round(result, 2)
+    #result = round(result, 2)
     return result
 
 
 def multiplication(a, b):
     result: float = 0.0
     result = float(a) * float(b)
-    result = round(result, 8)
+    #result = round(result, 8)
     return result
 
 
@@ -42,7 +36,7 @@ def division(a, b):
     else:
         result: float = 0.0
         result = float(a) / float(b)
-        result = round(result, 4)
+        #result = round(result, 4)
         return result
 
 

@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ce6795c1-7b27-4160-b2b6-08a7da0d8323" name="Changes" comment="screenshot added">
+    <list default="true" id="ce6795c1-7b27-4160-b2b6-08a7da0d8323" name="Changes" comment="comments for doxygen added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/calc_GUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/calc_GUI.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests.py" afterDir="false" />
     </list>
@@ -107,7 +108,7 @@
       <workItem from="1650818030339" duration="30000" />
       <workItem from="1650818074246" duration="77000" />
       <workItem from="1650819047049" duration="4000" />
-      <workItem from="1650820409503" duration="274000" />
+      <workItem from="1650820409503" duration="2043000" />
     </task>
     <task id="LOCAL-00001" summary="j">
       <created>1650807273452</created>
@@ -137,7 +138,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650814098649</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="comments for doxygen added">
+      <created>1650820708285</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1650820708285</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -171,7 +179,8 @@
     <MESSAGE value="added screenshot of calculator" />
     <MESSAGE value="windows adjustments" />
     <MESSAGE value="screenshot added" />
-    <option name="LAST_COMMIT_MESSAGE" value="screenshot added" />
+    <MESSAGE value="comments for doxygen added" />
+    <option name="LAST_COMMIT_MESSAGE" value="comments for doxygen added" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/neFIT_team$PocitanieKliknutiGlobal.coverage" NAME="PocitanieKliknutiGlobal Coverage Results" MODIFIED="1650813350209" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:/ZALOHA/CODING_highschool/3.rocnik/Python/Okna/Zadanie4" />
