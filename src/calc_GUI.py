@@ -81,9 +81,10 @@ def bracket2():
 
 def help_me():
     wrong_input()
-    help = Tk()
-    help_button = Label(help, text="long help that i will do later")
-    help_button.pack()
+    help_button = Tk()
+    help_button.title("Help Window")
+    help_window = Label(help_button, text="long help that i will do later")
+    help_window.pack()
 
 
 def delete_all():
