@@ -27,23 +27,22 @@ calc = Tk()
 calc.title("Calculator by neFit Team")
 calc.geometry("450x430")
 calc.configure(bg=DISPLAY_COLOR)
+equation = StringVar()
 
 # ======================== MAKING OF DISPLAY AND KEYBOARD ========================
-display = LabelFrame(calc, bg=DISPLAY_FRAME)
+display = LabelFrame(calc, bg=DISPLAY_FRAME, )
 display.grid(row=0, column=0, padx=20, pady=20, sticky=NSEW)
-display_entry = Entry(display, bg=DISPLAY_COLOR, font=NUMBERS_FONT)
+display_entry = Entry(display, textvariable=equation, bg=DISPLAY_COLOR, font=NUMBERS_FONT)
 display_entry.grid(row=1, column=2, padx=40, pady=50)
 keyboard = LabelFrame(calc, bg="white")
 keyboard.grid(row=2, column=0, padx=10, pady=10)
 
 
-def results():
+def equals():
     entry = display_entry.get()
-    entry = GUI.solving(entry)
-
+    entry = GUI.solve(entry)
     if entry is False:
         entry = "Math error"
-
     display_entry.delete(0, END)
     display_entry.insert(0, str(entry))
 
@@ -72,7 +71,6 @@ def bracket2():
 
 
 def help_me():
-    help_text = StringVar()
     help = Tk()
     help_button = Label(help, text="long help that i will do later")
     help_button.pack()
@@ -258,10 +256,6 @@ def dot():
 
 def factorial():
     display_entry.insert(END, "!")
-
-
-def equals():
-    display_entry.insert(END, "=")
 
 
 # sin
