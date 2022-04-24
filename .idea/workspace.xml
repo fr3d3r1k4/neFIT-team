@@ -8,6 +8,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/calc_GUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/calc_GUI.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mathLibrary.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/mathLibrary.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -162,7 +163,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/main" />
+                        <option value="main" />
                       </list>
                     </value>
                   </entry>
@@ -184,6 +185,6 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/neFIT_team$PocitanieKliknutiGlobal.coverage" NAME="PocitanieKliknutiGlobal Coverage Results" MODIFIED="1650813350209" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:/ZALOHA/CODING_highschool/3.rocnik/Python/Okna/Zadanie4" />
-    <SUITE FILE_PATH="coverage/neFIT_team$calc_GUI.coverage" NAME="calc_GUI Coverage Results" MODIFIED="1650814042700" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/neFIT_team$calc_GUI.coverage" NAME="calc_GUI Coverage Results" MODIFIED="1650809506926" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
   </component>
 </project>
