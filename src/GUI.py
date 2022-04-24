@@ -1,51 +1,19 @@
-from tkinter import *
-import mathLibrary as math
+import mathLibrary as mth
 
 
-def click(value):
-    global operation
-    text = StringVar()
-    operation = operation + str(value)
-    text.set(operation)
+def number(value):
+    if type(value) == int:
+        return True
 
 
-def delete_all():
-    text = StringVar()
-    text.set('')
+def solving(operator, a, b):
+    if operator == '*':
+        return mth.multiplication(a, b)
+    elif operator == '/':
+        return mth.division(a, b)
 
+    elif operator == '+':
+        return mth.addition(a, b)
 
-# @TODO HELP WINDOW
-def help():
-    help_text = StringVar()
-    help = Tk()
-    help_button = Label(help, text="long help that i will do later")
-    help_button.pack()
-
-
-def radical():
-    global number
-    text = StringVar()
-    number = number + " radical "
-    text.set(number)
-
-
-def n_square():
-    global number
-    text = StringVar()
-    number = number + " n_square "
-    text.set(number)
-
-
-def square():
-    global number
-    text = StringVar()
-    number = number + " square "
-    text.set(number)
-
-
-def equal():
-    global operator
-    text = StringVar()
-    add = str(eval(operator))
-    text.set(add)
-    operator = ''
+    elif operator == '-':
+        return mth.subtraction(a, b)
