@@ -1,4 +1,4 @@
-import mathLibrary as math
+import mathLibrary as mth
 
 
 def number(value):
@@ -6,15 +6,15 @@ def number(value):
         return True
 
 
-def solve(operator, a, b):
+def solving(operator, a, b):
     if operator == '*':
-        return math.multiplication(a, b)
+        return mth.multiplication(a, b)
     elif operator == '/':
-        return math.division(a, b)
+        return mth.division(a, b)
 
     elif operator == '+':
-        return math.addition(a, b)
+        return mth.addition(a, b)
 
     elif operator == '-':
-        return math.subtraction(a, b)
+        return mth.subtraction(a, b)
 
