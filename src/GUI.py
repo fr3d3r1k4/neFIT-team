@@ -40,17 +40,22 @@ def is_numeric(value):
     return value.replace(".", "", 1).isnumeric
 
 
-def long_number(number_value):
-    num = ""
-    float_num = False
-    for i in range(len(number_value)):
-        if number_value[i].number():
-            num += number_value[i]
-        elif number_value[i] == '.' and not float_num and num:
-            num += number_value[i]
-            float_num = True
+def long_number(str_number):
+    number = ""
+    float_number = False
+
+    for i in range(len(str_number)):
+        if str_number[i].isdigit():
+            number += str_number[i]
+
+        # Check if it is a float number
+        elif str_number[i] == '.' and not float_number and number:
+            number += str_number[i]
+            float_number = True
+
         else:
             return False
+
     return True
 
 
@@ -169,17 +174,22 @@ def brackets_one_two(expression):
     return calculate_value(new_result)
 
 
-def solve(value):
+def solve(expression):
+    # convert string to tuple
+    expression = tuple_string(expression)
+
+    if expression is False:
+        return False
 
 
     # Finally calculate the expression
-    value = brackets_one_two(value)
-    if value is False:
+    expression = brackets_one_two(expression)
+    if expression is False:
         return False
 
     # Convert to int or float
-    value = value[0]
-    if int(value) - float(value) == 0:
-        value = int(value)
+    expression = expression[0]
+    if int(expression) - float(expression) == 0:
+        expression = int(expression)
 
-    return value
+    return expression
