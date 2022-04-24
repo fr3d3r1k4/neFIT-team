@@ -201,3 +201,4 @@ button_equals = Button(keyboard, bg=OPERATORS_COLOR, font=NUMBERS_FONT, text="="
 button_equals.grid(row=4, column=7, padx=1, pady=1)
 
 calc.mainloop()
+
