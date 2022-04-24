@@ -13,9 +13,9 @@
 
 import mathLibrary as mth
 
-subtraction = ('(', '', '+', '/', '-', '*')
-option = {'s': 1, 'c': 1, 't': 1, 'g': 1, 'r': 2, '^': 2, '!': 1, '*': 2, '/': 2, '+': 2, '-': 2}
-operators = ['+', '-', '*', '/', '!', '^', ')', '(', 'r', 's', 'c', 't', 'g']
+subtraction = ('+', '-',  '*', '/', '(', '')
+option = {'+': 2, '-': 2,  '*': 2, '/': 2, 'sin': 1, 'cos': 1, 'tan': 1, 'square': 2, '^': 2, '!': 1}
+operators = ['+', '-', '*', '/', '!', '^', '(', ')', 'square', 'sin', 'cos', 'tan']
 
 
 def number(value):
@@ -27,16 +27,14 @@ def number(value):
 
 
 def solving_operands(operator, a, b):
-    if operator == '*':
+    if operator == '+':
+        return mth.addition(a, b)
+    elif operator == '-':
+        return mth.subtraction(a, b)
+    elif operator == '*':
         return mth.multiplication(a, b)
     elif operator == '/':
         return mth.division(a, b)
-
-    elif operator == '+':
-        return mth.addition(a, b)
-
-    elif operator == '-':
-        return mth.subtraction(a, b)
 
 
 def solving_operands2(operator, a):
@@ -157,6 +155,6 @@ def solve(value):
     if value is False:
         return False
     value = value[0]
-    if int(value) - float(value) == 0:
+    if float(value) - int(value) == 0:
         value = int(value)
     return value
