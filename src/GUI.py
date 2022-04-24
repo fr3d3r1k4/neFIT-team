@@ -158,3 +158,4 @@ def solve(value):
     if float(value) - int(value) == 0:
         value = int(value)
     return value
+
