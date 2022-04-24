@@ -41,5 +41,13 @@ def division(a, b):
         result = round(result, 4)
         return result
 
+def sinus(value):
+
+def cosinus(value):
+
+def tangens(value):
+
+def factorial(value):
+
 
 # ------ End of file mathLibrary.py ------
