@@ -14,8 +14,16 @@
 import mathLibrary as mth
 
 subtraction = ('+', '-',  '*', '/', '(', '')
-option = {'+': 2, '-': 2,  '*': 2, '/': 2, 'sin': 1, 'cos': 1, 'tan': 1, 'square': 2, '^': 2, '!': 1}
-operators = ['+', '-', '*', '/', '!', '^', '(', ')', 'square', 'sin', 'cos', 'tan']
+option = {'+': 2, '-': 2,  '*': 2, '/': 2, 'sin': 1, 'cos': 1, 'square': 2, '^': 2, '!': 1}
+operators = ['+', '-', '*', '/', '!', '^', '(', ')', 'square', 'sin', 'cos', ]
+before = {'+': ('num', ')', '!'), '-': ('num', '(', ')', '+', '*', '/', '!', ''), '*': ('num', ')', '!'), '/': ('num',
+          ')', '!'), '^': ('num', ')'), '!': ('num', ')'), '(': ('+', '-', '*', '/', '^', '(', 'sin', 'cos',  '',
+          'square'), ')': ('num', ')', '!'), 'num': ('+', '-', '*', '/', '^', '(', ''), 'square': ('num', ')'), 'sin':
+          ('+', '-', '*', '/', '^', '(' '',), 'cos': ('+', '-', '*', '/', '^', '(', '')}
+after = {'+': ('num', '-', '(', 'sin', 'cos', ), '-': ('num', '-', '(', 'sin', 'cos', ), '*': ('num', '-', '(', 'sin',
+         'cos', ), '/': ('num', '-', '(', 'sin', 'cos', ), '^': ('num', '(', 'sin', 'cos', ), '!': ('+', '-', '*', '/',
+         '^', ')', ''), '(': ('num', '-', '(', '!', 'sin', 'cos', ), ')': ('+', '-', '*', '/', '^', '', ')', 'square'),
+         'num': ('+', '-', '*', '/', '^', '', '!', ')', 'square'), 'square': '(', 'sin': '(', 'cos': '('}
 
 
 def number(value):
@@ -147,8 +155,35 @@ def brackets_first_second(value):
     return calculate_value(result)
 
 
+def repeating_symbols(value):
+    counter = 0
+    global before
+    global after
+    not_repeat = ['num' if number(value[i]) else value[i] for i in range(len(value))]
+    for i in range(len(not_repeat)):
+        if counter < 0:
+            return False
+        if (i - 1) >= 0 and not_repeat[i - 1] not in before[not_repeat[i]]:
+            return False
+        if (i + 1) < len(not_repeat) and not_repeat[i + 1] not in after[not_repeat[i]]:
+            return False
+        elif (i + 1) == len(not_repeat) and '' not in after[not_repeat[i]]:
+            return False
+        elif (i - 1) < 0 and '' not in before[not_repeat[i]]:
+            return False
+        if not_repeat[i] == '(':
+            counter += 1
+        elif not_repeat[i] == ')':
+            counter -= 1
+    if counter:
+        return False
+    return True
+
+
 def solve(value):
     value = tuple_string(value)
+    if repeating_symbols(value) is False:
+        return False
     if value is False:
         return False
     value = brackets_first_second(value)
