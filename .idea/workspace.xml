@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ce6795c1-7b27-4160-b2b6-08a7da0d8323" name="Changes" comment="added screenshot of calculator" />
+    <list default="true" id="ce6795c1-7b27-4160-b2b6-08a7da0d8323" name="Changes" comment="screenshot added">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/calc_GUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/calc_GUI.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,14 +30,37 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/durac/Desktop/CODES/neFIT-team&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/durac/Downloads/intellij-spacegray.jar&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors&quot;
   }
 }</component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.calc_GUI">
+    <configuration name="PocitanieKliknutiGlobal" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="neFIT-team" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="D:/ZALOHA/CODING_highschool/3.rocnik/Python/Okna/Zadanie4" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="D:/ZALOHA/CODING_highschool/3.rocnik/Python/Okna/Zadanie4/PocitanieKliknutiGlobal.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="calc_GUI" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="neFIT-team" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -59,6 +86,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.calc_GUI" />
+        <item itemvalue="Python.PocitanieKliknutiGlobal" />
       </list>
     </recent_temporary>
   </component>
@@ -74,6 +102,12 @@
       <workItem from="1650806671843" duration="364000" />
       <workItem from="1650807243799" duration="170000" />
       <workItem from="1650809497327" duration="481000" />
+      <workItem from="1650810539665" duration="270000" />
+      <workItem from="1650811136344" duration="4033000" />
+      <workItem from="1650818030339" duration="30000" />
+      <workItem from="1650818074246" duration="77000" />
+      <workItem from="1650819047049" duration="4000" />
+      <workItem from="1650820409503" duration="274000" />
     </task>
     <task id="LOCAL-00001" summary="j">
       <created>1650807273452</created>
@@ -89,7 +123,21 @@
       <option name="project" value="LOCAL" />
       <updated>1650809628350</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="windows adjustments">
+      <created>1650813620647</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1650813620647</updated>
+    </task>
+    <task id="LOCAL-00004" summary="screenshot added">
+      <created>1650814098649</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1650814098649</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -121,9 +169,12 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="j" />
     <MESSAGE value="added screenshot of calculator" />
-    <option name="LAST_COMMIT_MESSAGE" value="added screenshot of calculator" />
+    <MESSAGE value="windows adjustments" />
+    <MESSAGE value="screenshot added" />
+    <option name="LAST_COMMIT_MESSAGE" value="screenshot added" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/neFIT_team$calc_GUI.coverage" NAME="calc_GUI Coverage Results" MODIFIED="1650809506926" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/neFIT_team$PocitanieKliknutiGlobal.coverage" NAME="PocitanieKliknutiGlobal Coverage Results" MODIFIED="1650813350209" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:/ZALOHA/CODING_highschool/3.rocnik/Python/Okna/Zadanie4" />
+    <SUITE FILE_PATH="coverage/neFIT_team$calc_GUI.coverage" NAME="calc_GUI Coverage Results" MODIFIED="1650814042700" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
   </component>
 </project>

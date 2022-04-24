@@ -5,8 +5,8 @@
 # $Author:     FREDERIKA KMETOVA <xkmeto00@stud.fit.vutbr.cz>
 # $Date:       $2022-04-28
 # ===============================================================================
-#
-# @file calc_GUI.py
+
+## @file calc_GUI.py
 # @author FREDERIKA KMETOVA
 #
 # @brief Implementation of GUI for calculator.
