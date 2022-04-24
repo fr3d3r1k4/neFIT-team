@@ -24,7 +24,7 @@ DISPLAY_FRAME = "#aa6f5d"
 
 calc = Tk()
 calc.title("Calculator by neFit Team")
-calc.geometry(630x700")
+calc.geometry("630x700")
 calc.resizable(0, 0)
 calc.configure(bg=DISPLAY_COLOR)
 
