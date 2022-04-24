@@ -15,7 +15,7 @@ from tkinter import *
 
 DISPLAY_COLOR = "#ddc0b4"
 NUMBERS_COLOR = "black"
-NUMBERS_FONT = ("Courier New", 35)
+NUMBERS_FONT = ("Courier New", 30)
 OPERATORS_COLOR = "#c09175"
 
 calc = Tk()
