@@ -42,7 +42,7 @@ def equals():
     entry = display_entry.get()
     entry = GUI.solve(entry)
     if entry is False:
-        entry = "Math error"
+        entry = "Invalid input"
     display_entry.delete(0, END)
     display_entry.insert(0, str(entry))
 

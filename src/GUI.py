@@ -66,13 +66,13 @@ def tuple_string(input_str):
         if input_str[i] in operations:
 
             # check number and add to the result
-            if str_number and check_str_number(str_number):
+            if str_number and long_number(str_number):
                 if '.' in str_number:
                     result.append(float(str_number))
                 else:
                     result.append(int(str_number))
 
-            elif str_number and not check_str_number(str_number):
+            elif str_number and not long_number(str_number):
                 return False
 
             str_number = ""
@@ -87,7 +87,7 @@ def tuple_string(input_str):
 
     # Check string number, convert and add to the result
     if str_number:
-        if check_str_number(str_number):
+        if long_number(str_number):
             if '.' in str_number:
                 result.append(float(str_number))
             else:
