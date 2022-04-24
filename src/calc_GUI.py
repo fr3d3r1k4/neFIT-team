@@ -12,76 +12,154 @@
 # @brief Implementation of GUI for calculator.
 
 from tkinter import *
-from mathLibrary import *
-# font sizes
-NUMBERS_FONT = ("Courier New", 35)
-EQUATIONS_FONT = ("Courier New", 20)
-NUMBERS_COLOR = "black"
+
 DISPLAY_COLOR = "#ddc0b4"
-KEYBOARD_COLOR = "#d1ae9b"
-BUTTONS_COLOR = "black"
-BUTTONS_FRAME = "#aa6f5d"
+NUMBERS_COLOR = "black"
+NUMBERS_FONT = ("Courier New", 35)
 OPERATORS_COLOR = "#c09175"
 
+calc = Tk()
+calc.title("Calculator by neFit Team")
+calc.geometry("800x500")
+calc.configure(bg=DISPLAY_COLOR)
 
-# class calculator
-class Calculator:
-    def __init__(self):
-        self.calculator = Tk()
-        self.calculator.geometry("800x500")
-        self.calculator.title("Calculator: by neFIT Team")
-        self.calculator.configure(bg=DISPLAY_COLOR)
-        self.display = self.make_display()
-        self.numbers = {
-            7: (1, 3), 8: (1, 4), 9: (1, 5),
-            4: (2, 3), 5: (2, 4), 6: (2, 5),
-            1: (3, 3), 2: (3, 4), 3: (3, 5),
-            0: (4, 4),
-        }
-        self.operators = {
-            '(': (1, 1), ')': (1, 2),  'DEL': (1, 6), 'C': (1, 7),
-            '\u207f√': (2, 1), "\u00b2√": (2, 2), '/': (2, 6), '+': (2, 7),
-            'x\u207f': (3, 1), 'x²': (3, 2), '*': (3, 6), '-': (3, 7),
-            'SIN': (4, 1), 'COS': (4, 2), 'TAN': (4, 3), '.': (4, 5), '!': (4, 6), '=': (4, 7),
-        }
-        self.buttons_part = self.make_buttons_part()
-        self.make_buttons_display()
-        self.buttons_part.rowconfigure(0, weight=0)
-        for index in range(1, 8):
-            n = self.numbers[index]
-            self.buttons_part.rowconfigure(index, weight=1)
-            self.buttons_part.columnconfigure(index, weight=1)
-
-# running calculator
-    def run(self):
-        self.calculator.mainloop()
-
-    def make_display(self):
-        numbers = StringVar()
-        display = Entry(self.calculator, textvariable=numbers, bg=DISPLAY_COLOR)
-        display.pack(expand=True, fill="both")
-        return display
-
-    def make_buttons_part(self):
-        button = Button(self.calculator, bg=KEYBOARD_COLOR)
-        button.pack(expand=True, fill="both")
-        return button
-
-    def make_buttons_display(self):
-        for numbers, grid_value in self.numbers.items():
-            button = Button(self.buttons_part, text=str(numbers), bg=BUTTONS_FRAME, fg=NUMBERS_COLOR,
-                               font=NUMBERS_FONT, borderwidth=0)
-            button.grid(row=grid_value[0], column=grid_value[1], sticky=NSEW)
-        for operators, grid_value in self.operators.items():
-            button = Button(self.buttons_part, text=str(operators), bg=OPERATORS_COLOR, fg=OPERATORS_COLOR,
-                               font=NUMBERS_FONT, borderwidth=0)
-            button.grid(row=grid_value[0], column=grid_value[1], sticky=NSEW)
+keyboard = LabelFrame(calc, bg="white")
+keyboard.grid(row=2, column=0, padx=10, pady=10)
 
 
+def click(value):
+    global operation
+    text = StringVar()
+    operation = operation + str(value)
+    text.set(operation)
 
-# running calculator
-if __name__ == "__main__":
-    calc = Calculator()
-    calc.run()
 
-# ------ End of file calc_GUI.py ------
+def delete_all():
+    text = StringVar()
+    text.set('')
+
+
+def help():
+    help_text = StringVar()
+    help = Tk()
+    help_button = Label(help, text="long help that i will do later")
+    help_button.pack()
+
+
+def radical():
+    global number
+    text = StringVar()
+    number = number + " radical "
+    text.set(number)
+
+
+def n_square():
+    global number
+    text = StringVar()
+    number = number + " n_square "
+    text.set(number)
+
+
+def square():
+    global number
+    text = StringVar()
+    number = number + " square "
+    text.set(number)
+
+
+def equal():
+    global operator
+    text = StringVar()
+    add = str(eval(operator))
+    text.set(add)
+    operator = ''
+
+# (
+button_bracket1 = Button(keyboard, bg=OPERATORS_COLOR, font=NUMBERS_FONT, text="(", command=lambda: click("("))
+button_bracket1.grid(row=1, column=1, padx=1, pady=1)
+# )
+button_bracket2 = Button(keyboard, bg=OPERATORS_COLOR, font=NUMBERS_FONT, text=")", command=lambda: click(")"))
+button_bracket2.grid(row=1, column=2, padx=1, pady=1)
+# 7
+button_seven = Button(keyboard, bg=NUMBERS_COLOR, font=NUMBERS_FONT, text="7", command=lambda: click(7))
+button_seven.grid(row=1, column=3, padx=1, pady=1)
+# 8
+button_eight = Button(keyboard, bg=NUMBERS_COLOR, font=NUMBERS_FONT, text="8", command=lambda: click(8))
+button_eight.grid(row=1, column=4, padx=1, pady=1)
+# 9
+button_nine = Button(keyboard, bg=NUMBERS_COLOR, font=NUMBERS_FONT, text="9", command=lambda: click(9))
+button_nine.grid(row=1, column=5, padx=1, pady=1)
+# help
+button_help = Button(keyboard, bg=OPERATORS_COLOR, font=NUMBERS_FONT, text="help", command=help)
+button_help.grid(row=1, column=6, padx=1, pady=1)
+# c
+button_c = Button(keyboard, bg=OPERATORS_COLOR, font=NUMBERS_FONT, text="C", command=delete_all)
+button_c.grid(row=1, column=7, padx=1, pady=1)
+
+# n radical
+button_n_radical = Button(keyboard, bg=OPERATORS_COLOR, font=NUMBERS_FONT, text="\u207f√", command=radical)
+button_n_radical.grid(row=2, column=1, padx=1, pady=1)
+# radical
+button_2_radical = Button(keyboard, bg=OPERATORS_COLOR, font=NUMBERS_FONT, text="\u00b2√", command=radical)
+button_2_radical.grid(row=2, column=2, padx=1, pady=1)
+# 4
+button_four = Button(keyboard, bg=NUMBERS_COLOR, font=NUMBERS_FONT, text="4", command=lambda: click(4))
+button_four.grid(row=2, column=3, padx=1, pady=1)
+# 5
+button_five = Button(keyboard, bg=NUMBERS_COLOR, font=NUMBERS_FONT, text="5", command=lambda: click(5))
+button_five.grid(row=2, column=4, padx=1, pady=1)
+# 6
+button_six = Button(keyboard, bg=NUMBERS_COLOR, font=NUMBERS_FONT, text="6", command=lambda: click(6))
+button_six.grid(row=2, column=5, padx=1, pady=1)
+# /
+button_divide = Button(keyboard, bg=OPERATORS_COLOR, font=NUMBERS_FONT, text="/", command=lambda: click("/"))
+button_divide.grid(row=2, column=6, padx=1, pady=1)
+# +
+button_plus = Button(keyboard, bg=OPERATORS_COLOR, font=NUMBERS_FONT, text="+", command=lambda: click("+"))
+button_plus.grid(row=2, column=7, padx=1, pady=1)
+
+# x^n
+button_n_square = Button(keyboard, bg=OPERATORS_COLOR, font=NUMBERS_FONT, text="x\u207f", command=n_square)
+button_n_square.grid(row=3, column=1, padx=1, pady=1)
+# x^2
+button_2_square = Button(keyboard, bg=OPERATORS_COLOR, font=NUMBERS_FONT, text="x²", command=square)
+button_2_square.grid(row=3, column=2, padx=1, pady=1)
+# 1
+button_one = Button(keyboard, bg=NUMBERS_COLOR, font=NUMBERS_FONT, text="1", command=lambda: click(1))
+button_one.grid(row=3, column=3, padx=1, pady=1)
+# 2
+button_two = Button(keyboard, bg=NUMBERS_COLOR, font=NUMBERS_FONT, text="2", command=lambda: click(2))
+button_two.grid(row=3, column=4, padx=1, pady=1)
+# 3
+button_three = Button(keyboard, bg=NUMBERS_COLOR, font=NUMBERS_FONT, text="3", command=lambda: click(3))
+button_three.grid(row=3, column=5, padx=1, pady=1)
+# *
+button_2_square = Button(keyboard, bg=OPERATORS_COLOR, font=NUMBERS_FONT, text="*", command=lambda: click("*"))
+button_2_square.grid(row=3, column=6, padx=1, pady=1)
+# -
+button_2_square = Button(keyboard, bg=OPERATORS_COLOR, font=NUMBERS_FONT, text="-", command=lambda: click("-"))
+button_2_square.grid(row=3, column=7, padx=1, pady=1)
+
+# sin
+button_sin = Button(keyboard, bg=OPERATORS_COLOR, font=NUMBERS_FONT, text="sin", command=lambda: click("sin"))
+button_sin.grid(row=4, column=1, padx=1, pady=1)
+# cos
+button_cos = Button(keyboard, bg=OPERATORS_COLOR, font=NUMBERS_FONT, text="cos", command=lambda: click("cos"))
+button_cos.grid(row=4, column=2, padx=1, pady=1)
+# tan
+button_tan = Button(keyboard, bg=OPERATORS_COLOR, font=NUMBERS_FONT, text="tan", command=lambda: click("tan"))
+button_tan.grid(row=4, column=3, padx=1, pady=1)
+# 0
+button_zero = Button(keyboard, bg=NUMBERS_COLOR, font=NUMBERS_FONT, text="0", command=lambda: click(0))
+button_zero.grid(row=4, column=4, padx=1, pady=1)
+# .
+button_dot = Button(keyboard, bg=OPERATORS_COLOR, font=NUMBERS_FONT, text=".", command=lambda: click("."))
+button_dot.grid(row=4, column=5, padx=1, pady=1)
+# !
+button_factorial = Button(keyboard, bg=OPERATORS_COLOR, font=NUMBERS_FONT, text="!", command=lambda: click("!"))
+button_factorial.grid(row=4, column=6, padx=1, pady=1)
+# =
+button_equals = Button(keyboard, bg=OPERATORS_COLOR, font=NUMBERS_FONT, text="=", command=equal)
+button_equals.grid(row=4, column=7, padx=1, pady=1)
+
+calc.mainloop()
