@@ -36,6 +36,10 @@ def solving(operator, a, b):
         return mth.subtraction(a, b)
 
 
+def is_numeric(value):
+    return value.replace(".", "", 1).isnumeric
+
+
 def long_number(number_value):
     num = ""
     float_num = False
@@ -50,44 +54,44 @@ def long_number(number_value):
     return True
 
 
-def tuple_string(input_value):
+def tuple_string(input_str):
     operations = ['+', '-', '*', '/', '!', '^', ')', '(', 'r', 's', 'c', 't', 'g']
 
     i = 0
-    input_value = ""
+    str_number = ""
     result = []
 
-    while i < len(input_value):
+    while i < len(input_str):
 
-        if input_value[i] in operations:
+        if input_str[i] in operations:
 
             # check number and add to the result
-            if input_value and long_number(input_value):
-                if '.' in input_value:
-                    result.append(float(input_value))
+            if str_number and check_str_number(str_number):
+                if '.' in str_number:
+                    result.append(float(str_number))
                 else:
-                    result.append(int(input_value))
+                    result.append(int(str_number))
 
-            elif input_value and not long_number(input_value):
+            elif str_number and not check_str_number(str_number):
                 return False
 
-            input_value = ""
+            str_number = ""
 
             # append operation to the result
-            result.append(input_value[i])
+            result.append(input_str[i])
 
         else:
-            input_value += input_value[i]
+            str_number += input_str[i]
 
         i += 1
 
     # Check string number, convert and add to the result
-    if input_value:
-        if long_number(input_value):
-            if '.' in input_value:
-                result.append(float(input_value))
+    if str_number:
+        if check_str_number(str_number):
+            if '.' in str_number:
+                result.append(float(str_number))
             else:
-                result.append(int(input_value))
+                result.append(int(str_number))
 
         else:
             return False
@@ -125,31 +129,43 @@ def calculate_value(value):
     return value
 
 
-def brackets_one_two(value):
-    brackets = False
-    first_part = []
-    counter_of_bracket = 0
+def brackets_one_two(expression):
+    used_bracket = False
+    cut_result = []
+    cnt_bracket = 0
     i = 0
-    new_result = []
-    while i < len(value):
-        if value[i] == '(':
-            brackets = True
-            if counter_of_bracket:
-                first_part.append('(')
-            counter_of_bracket += 1
-        elif value[i] == ')':
-            counter_of_bracket -= 1
-            if not counter_of_bracket:
-                new_result += brackets_one_two(first_part)
-                first_part = []
-                brackets = False
+    new_result = []  # Final result
+
+    while i < len(expression):
+        if expression[i] == '(':
+            used_bracket = True
+
+            if cnt_bracket:
+                cut_result.append('(')
+
+            cnt_bracket += 1
+
+        elif expression[i] == ')':
+            cnt_bracket -= 1
+
+            if not cnt_bracket:
+
+                # call priority_brackets function to simplify expression
+                new_result += brackets_one_two(cut_result)
+                cut_result = []
+                used_bracket = False
+
             else:
-                first_part.append(')')
-        elif brackets:
-            first_part.append(value[i])
+                cut_result.append(')')
+
+        elif used_bracket:
+            cut_result.append(expression[i])
+
         else:
-            new_result.append(value[i])
+            new_result.append(expression[i])
+
         i += 1
+
     return calculate_value(new_result)
 
 
