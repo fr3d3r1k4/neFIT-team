@@ -1,16 +1,7 @@
-# =========================================================================
-#
-# Purpose:     Calculator tests
-#
-# $Author:     ROMANA DURACIOVA <xdurac01@stud.fit.vutbr.cz>
-# $Date:       $2022-04-28
-# =========================================================================
-
-
-## @file tests.py
-# @author ROMANA DURACIOVA
-#
-# @brief Implementation of tests for calculator and math library.
+##  @file   tests.py
+#   @brief  Implementation of tests for calculator operations.
+#   @author ROMANA DURACIOVA
+#   @date   2022-04-28
 
 import pytest
 import mathLibrary

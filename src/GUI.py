@@ -1,3 +1,9 @@
+##  @file   GUI.py
+#   @brief  Linking math library with calculator, input assertion, defining background functions of calculator
+#           essential for right functioning.
+#   @author FREDERIKA KMETOVA
+#   @date   2022-04-28
+
 import mathLibrary as mth
 
 
