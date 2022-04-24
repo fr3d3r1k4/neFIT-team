@@ -12,6 +12,7 @@
 # @brief Implementation of GUI for calculator.
 
 from tkinter import *
+from GUI import *
 
 DISPLAY_COLOR = "#ddc0b4"
 KEYBOARD_COLOR = "#d1ae9b"
@@ -33,55 +34,6 @@ display_entry = Entry(display, bg=DISPLAY_COLOR, font=NUMBERS_FONT)
 display_entry.grid(row=1, column=2, padx=40, pady=50)
 keyboard = LabelFrame(calc, bg="white")
 keyboard.grid(row=2, column=0, padx=10, pady=10)
-
-
-def click(value):
-    global operation
-    text = StringVar()
-    operation = operation + str(value)
-    text.set(operation)
-
-
-def delete_all():
-    text = StringVar()
-    text.set('')
-
-
-# @TODO HELP WINDOW
-def help():
-    help_text = StringVar()
-    help = Tk()
-    help_button = Label(help, text="long help that i will do later")
-    help_button.pack()
-
-
-def radical():
-    global number
-    text = StringVar()
-    number = number + " radical "
-    text.set(number)
-
-
-def n_square():
-    global number
-    text = StringVar()
-    number = number + " n_square "
-    text.set(number)
-
-
-def square():
-    global number
-    text = StringVar()
-    number = number + " square "
-    text.set(number)
-
-
-def equal():
-    global operator
-    text = StringVar()
-    add = str(eval(operator))
-    text.set(add)
-    operator = ''
 
 
 # (
