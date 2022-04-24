@@ -1,7 +1,15 @@
-##  @file   calc_GUI.py
-#   @brief  Implementation of GUI for calculator.
-#   @author FREDERIKA KMETOVA
-#   @date   2022-04-28
+# ===============================================================================
+#
+# Purpose:     GUI for calculator
+#
+# $Author:     FREDERIKA KMETOVA <xkmeto00@stud.fit.vutbr.cz>
+# $Date:       $2022-04-28
+# ===============================================================================
+
+## @file calc_GUI.py
+# @author FREDERIKA KMETOVA
+#
+# @brief Implementation of GUI for calculator.
 
 from tkinter import *
 import GUI
@@ -289,4 +297,4 @@ button_equals.grid(row=4, column=7, padx=1, pady=1)
 
 calc.mainloop()
 
-# End of file calc_GUI.py
+# ---- End of file calc_GUI.py ----
