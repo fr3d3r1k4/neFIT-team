@@ -1,10 +1,10 @@
-# ======== Copyright (c) 2021, FIT VUT Brno, All rights reserved. ============//
+# ============================================================================
 #
 # Purpose:     Math library for calculator
 #
 # $Author:     ROMANA DURACIOVA <xdurac01@stud.fit.vutbr.cz>, FILIP PLANKA <xplank03@stud.fit.vutbr.cz>
 # $Date:       $2022-04-28
-# ============================================================================//
+# ============================================================================
 #
 # @file mathLibrary.py
 # @author ROMANA DURACIOVA, FILIP PLANKA
