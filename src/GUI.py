@@ -17,4 +17,3 @@ def solving(operator, a, b):
 
     elif operator == '-':
         return mth.subtraction(a, b)
-
