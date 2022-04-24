@@ -5,13 +5,14 @@
 # $Author:     ROMANA DURACIOVA <xdurac01@stud.fit.vutbr.cz>
 # $Date:       $2022-04-28
 # =========================================================================
-#
-# @file tests.py
+
+
+## @file tests.py
 # @author ROMANA DURACIOVA
 #
 # @brief Implementation of tests for calculator and math library.
-import pytest
 
+import pytest
 import mathLibrary
 
 
@@ -80,6 +81,5 @@ def test_division():
         mathLibrary.division(32, 0)
         mathLibrary.division(245.80, 0)
         mathLibrary.division(-99, 0)
-
 
 # ------ End of file tests.py ------
