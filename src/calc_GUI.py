@@ -25,7 +25,6 @@ DISPLAY_FRAME = "#aa6f5d"
 calc = Tk()
 calc.title("Calculator by neFit Team")
 calc.geometry("560x550")
-calc.resizable(0, 0)
 calc.configure(bg=DISPLAY_COLOR)
 
 display = LabelFrame(calc, bg=DISPLAY_FRAME)
@@ -39,14 +38,11 @@ keyboard.grid(row=2, column=0, padx=10, pady=10)
 def one():
     display_entry.insert(END, "1")
 
-
 def two():
     display_entry.insert(END, "2")
 
-
 def three():
     display_entry.insert(END, "3")
-
 
 def four():
     display_entry.insert(END, "4")
@@ -76,12 +72,44 @@ def zero():
     display_entry.insert(END, "0")
 
 
+def bracket1():
+    display_entry.insert(END, "(")
+
+
+def bracket2():
+    display_entry.insert(END, ")")
+
+
+def n_radical():
+    display_entry.insert(END, "\u207f√")
+
+
+def radical():
+    display_entry.insert(END, "\u00b2√")
+
+
+def divide():
+    display_entry.insert(END, "/")
+
+
+def plus():
+    display_entry.insert(END, "+")
+
+
+def n_square():
+    display_entry.insert(END, "x\u207f")
+
+
+def square():
+    display_entry.insert(END, "x²")
+
+
 # (
-button_bracket1 = Button(keyboard, bg=OPERATORS_COLOR, font=NUMBERS_FONT, text="(", command=lambda: GUI.click("("),
+button_bracket1 = Button(keyboard, bg=OPERATORS_COLOR, font=NUMBERS_FONT, text="(", command=bracket1,
                          height=2, width=2)
 button_bracket1.grid(row=1, column=1, padx=1, pady=1)
 # )
-button_bracket2 = Button(keyboard, bg=OPERATORS_COLOR, font=NUMBERS_FONT, text=")", command=lambda: GUI.click(")"),
+button_bracket2 = Button(keyboard, bg=OPERATORS_COLOR, font=NUMBERS_FONT, text=")", command=bracket2,
                          height=2, width=2)
 button_bracket2.grid(row=1, column=2, padx=1, pady=1)
 # 7
@@ -106,11 +134,11 @@ button_c = Button(keyboard, bg=OPERATORS_COLOR, font=NUMBERS_FONT, text="C", com
 button_c.grid(row=1, column=7, padx=1, pady=1)
 
 # n radical
-button_n_radical = Button(keyboard, bg=OPERATORS_COLOR, font=NUMBERS_FONT, text="\u207f√", command=GUI.radical,
+button_n_radical = Button(keyboard, bg=OPERATORS_COLOR, font=NUMBERS_FONT, text="\u207f√", command=n_radical,
                           height=2, width=2)
 button_n_radical.grid(row=2, column=1, padx=1, pady=1)
 # radical
-button_2_radical = Button(keyboard, bg=OPERATORS_COLOR, font=NUMBERS_FONT, text="\u00b2√", command=GUI.radical,
+button_2_radical = Button(keyboard, bg=OPERATORS_COLOR, font=NUMBERS_FONT, text="\u00b2√", command=radical,
                           height=2, width=2)
 button_2_radical.grid(row=2, column=2, padx=1, pady=1)
 # 4
@@ -126,20 +154,20 @@ button_six = Button(keyboard, bg=NUMBERS_COLOR, font=NUMBERS_FONT, text="6", com
                     height=2, width=2)
 button_six.grid(row=2, column=5, padx=1, pady=1)
 # /
-button_divide = Button(keyboard, bg=OPERATORS_COLOR, font=NUMBERS_FONT, text="/", command=lambda: GUI.click("/"),
+button_divide = Button(keyboard, bg=OPERATORS_COLOR, font=NUMBERS_FONT, text="/", command=divide,
                        height=2, width=2)
 button_divide.grid(row=2, column=6, padx=1, pady=1)
 # +
-button_plus = Button(keyboard, bg=OPERATORS_COLOR, font=NUMBERS_FONT, text="+", command=lambda: GUI.click("+"),
+button_plus = Button(keyboard, bg=OPERATORS_COLOR, font=NUMBERS_FONT, text="+", command=plus,
                      height=2, width=2)
 button_plus.grid(row=2, column=7, padx=1, pady=1)
 
 # x^n
-button_n_square = Button(keyboard, bg=OPERATORS_COLOR, font=NUMBERS_FONT, text="x\u207f", command=GUI.n_square,
+button_n_square = Button(keyboard, bg=OPERATORS_COLOR, font=NUMBERS_FONT, text="x\u207f", command=n_square,
                          height=2, width=2)
 button_n_square.grid(row=3, column=1, padx=1, pady=1)
 # x^2
-button_2_square = Button(keyboard, bg=OPERATORS_COLOR, font=NUMBERS_FONT, text="x²", command=GUI.square,
+button_2_square = Button(keyboard, bg=OPERATORS_COLOR, font=NUMBERS_FONT, text="x²", command=square,
                          height=2, width=2)
 button_2_square.grid(row=3, column=2, padx=1, pady=1)
 # 1
