@@ -37,6 +37,17 @@ keyboard = LabelFrame(calc, bg="white")
 keyboard.grid(row=2, column=0, padx=10, pady=10)
 
 
+def results():
+    entry = display_entry.get()
+    entry = GUI.solve(entry)
+
+    if entry is False:
+        entry = "Math error"
+
+    display_entry.delete(0,END)
+    display_entry.insert(0, str(entry))
+
+
 # ========================== FIRST ROW ===========================
 
 
@@ -67,6 +78,10 @@ def helpMe():
     help_button.pack()
 
 
+def delete_all():
+    display_entry.delete(len(display_entry.get()) - 1, END)
+
+
 # (
 button_bracket1 = Button(keyboard, bg=OPERATORS_COLOR, font=NUMBERS_FONT, text="(", command=bracket1,
                          height=1, width=3)
@@ -92,7 +107,7 @@ button_help = Button(keyboard, bg=OPERATORS_COLOR, font=NUMBERS_FONT, text="?", 
                      height=1, width=3)
 button_help.grid(row=1, column=6, padx=1, pady=1)
 # c
-button_c = Button(keyboard, bg=OPERATORS_COLOR, font=NUMBERS_FONT, text="C", command=GUI.delete_all,
+button_c = Button(keyboard, bg=OPERATORS_COLOR, font=NUMBERS_FONT, text="C", command=delete_all,
                   height=1, width=3)
 button_c.grid(row=1, column=7, padx=1, pady=1)
 
