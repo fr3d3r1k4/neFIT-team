@@ -265,10 +265,10 @@ def factorial():
 
 
 # sin
-button_sin = Button(keyboard, bg=OPERATORS_COLOR, font=NUMBERS_FONT, text="sin", command=sin, height=1, width=3)
+button_sin = Button(keyboard, bg=OPERATORS_COLOR, font=NUMBERS_FONT, height=1, width=3)
 button_sin.grid(row=4, column=1, padx=1, pady=1)
 # cos
-button_cos = Button(keyboard, bg=OPERATORS_COLOR, font=NUMBERS_FONT, text="cos", command=cos, height=1, width=3)
+button_cos = Button(keyboard, bg=OPERATORS_COLOR, font=NUMBERS_FONT, text="log", command=cos, height=1, width=3)
 button_cos.grid(row=4, column=2, padx=1, pady=1)
 # help
 button_help = Button(keyboard, bg=OPERATORS_COLOR, font=NUMBERS_FONT, text="?", command=help_me, height=1, width=3)

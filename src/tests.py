@@ -71,6 +71,7 @@ def test_division():
         mathLibrary.division(245.80, 0)
         mathLibrary.division(-99, 0)
 
+
 def test_factorial():
     # value error
     with pytest.raises(ValueError):
