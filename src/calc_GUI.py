@@ -114,7 +114,7 @@ def n_radical():
 
 def radical():
     wrong_input()
-    display_entry.insert(END, "\u00b2√")
+    display_entry.insert(END, "\u221A")
 
 
 def four():
@@ -147,7 +147,7 @@ button_n_radical = Button(keyboard, bg=OPERATORS_COLOR, font=NUMBERS_FONT, text=
                           width=3)
 button_n_radical.grid(row=2, column=1, padx=1, pady=1)
 # radical
-button_2_radical = Button(keyboard, bg=OPERATORS_COLOR, font=NUMBERS_FONT, text="\u00b2√", command=radical, height=1,
+button_2_radical = Button(keyboard, bg=OPERATORS_COLOR, font=NUMBERS_FONT, text="\u221A", command=radical, height=1,
                           width=3)
 button_2_radical.grid(row=2, column=2, padx=1, pady=1)
 # 4
