@@ -20,8 +20,7 @@ def test_addition():
 
     # decimal numbers
     assert mathLibrary.addition(0.23, 0.6) == 0.83
-    assert mathLibrary.addition(-0.77, 0.54) == -0.23
-    assert mathLibrary.addition(0.4, -0.63) == -0.23
+    assert mathLibrary.addition(0.23, -0.6) == -0.37
 
 
 def test_subtraction():
@@ -52,7 +51,6 @@ def test_multiplication():
     assert mathLibrary.multiplication(478, 0) == 0
     assert mathLibrary.multiplication(0, 542) == 0
     # decimal numbers
-    assert mathLibrary.multiplication(0.4, 3) == 1.2
     assert mathLibrary.multiplication(0.23, 0.47) == 0.1081
     assert mathLibrary.multiplication(-0.5437, 0.8076) == -0.43909212
     # big numbers
@@ -72,5 +70,53 @@ def test_division():
         mathLibrary.division(32, 0)
         mathLibrary.division(245.80, 0)
         mathLibrary.division(-99, 0)
+
+def test_factorial():
+    # value error
+    with pytest.raises(ValueError):
+        mathLibrary.factorial(-23)
+        mathLibrary.factorial(-3.5)
+
+    assert mathLibrary.factorial(7) == 5040
+    assert mathLibrary.factorial(1) == 1
+    assert mathLibrary.factorial(0) == 1
+
+
+def test_power():
+    # value error
+    with pytest.raises(ValueError):
+        mathLibrary.power(4, -2)
+        mathLibrary.power(2, 0.456)
+        mathLibrary.power(2, -3.56)
+
+    assert mathLibrary.power(4, 0) == 1
+    assert mathLibrary.power(-4, 0) == 1
+    assert mathLibrary.power(23, 1) == 23
+    assert mathLibrary.power(4, 2) == 16
+    assert mathLibrary.power(-6, 2) == 36
+    assert mathLibrary.power(-6, 3) == -216
+
+
+def test_root_operation():
+    # value error
+    with pytest.raises(ValueError):
+        mathLibrary.rootMath(-8, 2)
+        mathLibrary.rootMath(-8, -3)
+
+    assert mathLibrary.rootMath(0, 6) == 0
+    assert mathLibrary.rootMath(1, 6) == 1
+    assert mathLibrary.rootMath(16, 2) == 4
+    assert mathLibrary.rootMath(6561, 4) == 9
+    assert mathLibrary.rootMath(0.0529, 2) == 0.23
+
+
+def test_log():
+    with pytest.raises(ValueError):
+        mathLibrary.log(0)
+        mathLibrary.log(-23)
+        mathLibrary.log(0.246)
+
+    assert mathLibrary.log(10) == 1
+    assert mathLibrary.log(100) == 2
 
 # ------ End of file tests.py ------
