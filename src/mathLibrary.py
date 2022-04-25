@@ -10,21 +10,18 @@ import math
 def addition(a, b):
     result: float = 0.0
     result = float(a) + float(b)
-    #result = round(result, 2)
     return result
 
 
 def subtraction(a, b):
     result: float = 0.0
     result = float(a) - float(b)
-    #result = round(result, 2)
     return result
 
 
 def multiplication(a, b):
     result: float = 0.0
     result = float(a) * float(b)
-    #result = round(result, 8)
     return result
 
 
@@ -34,9 +31,7 @@ def division(a, b):
     else:
         result: float = 0.0
         result = float(a) / float(b)
-        #result = round(result, 4)
         return result
-
 
 
 # ------ End of file mathLibrary.py ------
