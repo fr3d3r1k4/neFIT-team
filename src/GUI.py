@@ -1,15 +1,8 @@
-# ===============================================================================
-#
-# Purpose:     GUI for calculator
-#
-# $Author:     FREDERIKA KMETOVA <xkmeto00@stud.fit.vutbr.cz>
-# $Date:       $2022-04-28
-# ===============================================================================
-#
-# @file calc_GUI.py
-# @author FREDERIKA KMETOVA
-#
-# @brief Implementation of GUI for calculator.
+##  @file   GUI.py
+#   @brief  Linking math library with calculator, input assertion, defining background functions of calculator
+#           essential for right functioning.
+#   @author FREDERIKA KMETOVA
+#   @date   2022-04-28
 
 import mathLibrary as mth
 

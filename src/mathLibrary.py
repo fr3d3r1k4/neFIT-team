@@ -1,9 +1,7 @@
-
-
-##  @file mathLibrary.py
-#   @brief Implementation of mathematical operations for calculator.
+##  @file   mathLibrary.py
+#   @brief  Implementation of mathematical operations for calculator.
 #   @author ROMANA DURACIOVA, FILIP PLANKA
-#   @date 2022-04-28
+#   @date   2022-04-28
 
 
 import math

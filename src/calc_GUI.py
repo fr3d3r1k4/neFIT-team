@@ -1,15 +1,7 @@
-# ===============================================================================
-#
-# Purpose:     GUI for calculator
-#
-# $Author:     FREDERIKA KMETOVA <xkmeto00@stud.fit.vutbr.cz>
-# $Date:       $2022-04-28
-# ===============================================================================
-
-## @file calc_GUI.py
-# @author FREDERIKA KMETOVA
-#
-# @brief Implementation of GUI for calculator.
+##  @file calc_GUI.py
+#   @brief Implementation of GUI for calculator.
+#   @author FREDERIKA KMETOVA
+#   @date 2022-04-28
 
 from tkinter import *
 import GUI
@@ -279,7 +271,7 @@ button_sin.grid(row=4, column=1, padx=1, pady=1)
 button_cos = Button(keyboard, bg=OPERATORS_COLOR, font=NUMBERS_FONT, text="cos", command=cos, height=1, width=3)
 button_cos.grid(row=4, column=2, padx=1, pady=1)
 # help
-button_help = Button(keyboard, bg=OPERATORS_COLOR, font=NUMBERS_FONT, text="HELP", command=help_me, height=1, width=3)
+button_help = Button(keyboard, bg=OPERATORS_COLOR, font=NUMBERS_FONT, text="?", command=help_me, height=1, width=3)
 button_help.grid(row=4, column=3, padx=1, pady=1)
 # 0
 button_zero = Button(keyboard, bg=NUMBERS_COLOR, font=NUMBERS_FONT, text="0", command=zero, height=1, width=3)
