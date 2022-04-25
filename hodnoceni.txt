@@ -1,4 +1,4 @@
-xlogin01 100 (základ GUI a základní mat. operace)
-xlogin02 100 (pokročilé mat. operace)
-xlogin03 90 (profiling, instalátor)
-xlogin04 110 (testy, dokumentace)
+xdurac01 150 (základné mat. operácie, testy, dokumentácia (Doxygen), Makefile, Doxyfile, inštalátor)
+xkmeto00 140 (GUI, linkovanie s GUI, dokumentácia, užívateľská príručka)
+xplank03 100 (profiling, pokročilé mat. operácie)
+xjanco03 10  (README, text nápovedy)
