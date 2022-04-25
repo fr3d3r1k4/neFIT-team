@@ -106,7 +106,7 @@ def tuple_string(in_string):
 
     return result
 
-# @brief Solving the value fromed on priority of option
+# @brief Solving the value formed on priority of option
 # @param Value as tuple
 # @return Solved tuple value
 def calculate_value(value):
