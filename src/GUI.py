@@ -21,7 +21,7 @@ after = {'+': ('num', '-', '(', 'sin', 'cos', ), '-': ('num', '-', '(', 'sin', '
 
 # @brief Checking if the input value is float or int
 # @param Value which needs to be converted
-# @return Returns value in int or float form 
+# @return Returns value in int or float form
 def number(value):
     if isinstance(value, int):
         return True
@@ -74,15 +74,15 @@ def long_number(in_value):
     return True
 
 # @brief Changing input string into tuple string
-# @param Input svalue as a string 
+# @param Input value as a string
 # @return Changed string
-def tuple_string(in_value):
+def tuple_string(in_string):
     global operators
     i = 0
     num_string = ""
     result = []
-    while i < len(in_value):
-        if in_value[i] in operators:
+    while i < len(in_string):
+        if in_string[i] in operators:
             if num_string and long_number(num_string):
                 if '.' in num_string:
                     result.append(float(num_string))
@@ -169,7 +169,7 @@ def brackets_first_second(value):
 
 # @brief Checking if the input is written correctly
 # @param Value as tuple
-# @return True if the tuple value is written correctand False if not
+# @return True if the tuple value is written correct and False if not
 def repeating_symbols(value):
     counter = 0
     global before
@@ -210,4 +210,3 @@ def solve(value):
     if float(value) - int(value) == 0:
         value = int(value)
     return value
-
