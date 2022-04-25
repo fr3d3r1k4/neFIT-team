@@ -84,10 +84,10 @@ def tuple_string(in_string):
     while i < len(in_string):
         if in_string[i] in operators:
             if num_string and long_number(num_string):
-                if '.' in num_string:
-                    result.append(float(num_string))
-                else:
+                if '.' not in num_string:
                     result.append(int(num_string))
+                else:
+                    result.append(float(num_string))
             elif num_string and not long_number(num_string):
                 return False
             num_string = ""
@@ -97,10 +97,10 @@ def tuple_string(in_string):
         i += 1
     if num_string:
         if long_number(num_string):
-            if '.' in num_string:
-                result.append(float(num_string))
-            else:
+            if '.' not in num_string:
                 result.append(int(num_string))
+            else:
+                result.append(float(num_string))
         else:
             return False
 
