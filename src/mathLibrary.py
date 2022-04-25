@@ -13,7 +13,7 @@ import math
 # @param a First adddend
 # @param b Second addend
 # 
-# @ return Sum of two numbers a, b
+# @return Sum of two numbers a, b
 def addition(a, b):
     result: float = 0.0
     result = float(a) + float(b)
