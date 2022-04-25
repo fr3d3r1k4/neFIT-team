@@ -7,7 +7,6 @@ from tkinter import *
 import GUI
 
 # ========================== DEFINING COLORS AND FONTS ==========================
-# @brief Definition of colors and fonts
 DISPLAY_COLOR = "#ddc0b4"
 KEYBOARD_COLOR = "#d1ae9b"
 NUMBERS_COLOR = "white"
@@ -16,7 +15,6 @@ OPERATORS_COLOR = "#c09175"
 DISPLAY_FRAME = "#aa6f5d"
 
 # ========================== MAKING OF CALCULATOR WINDOW =========================
-# @brief Making of calculator window
 calc = Tk()
 calc.title("Calculator by neFit Team")
 calc.geometry("450x430")
@@ -24,7 +22,6 @@ calc.configure(bg=DISPLAY_COLOR)
 equation = StringVar()
 
 # ======================== MAKING OF DISPLAY AND KEYBOARD ========================
-# @brief Making a display and frame for buttons
 display = LabelFrame(calc, bg=DISPLAY_FRAME)
 display.grid(row=0, column=0, padx=20, pady=20, sticky=NSEW)
 display_entry = Entry(display, textvariable=equation, bg=DISPLAY_COLOR, font=NUMBERS_FONT)
@@ -32,7 +29,7 @@ display_entry.grid(row=1, column=2, padx=40, pady=50)
 keyboard = LabelFrame(calc, bg="white")
 keyboard.grid(row=2, column=0, padx=10, pady=10)
 
-# @brief Showing results or printing error message
+
 def equals():
     entry = display_entry.get()
     entry = GUI.solve(entry)
@@ -41,7 +38,7 @@ def equals():
     display_entry.delete(0, END)
     display_entry.insert(0, str(entry))
 
-# @brief Checking if the input is written correct
+
 def wrong_input():
     if display_entry.get() == "Invalid input.":
         display_entry.delete(0, END)
