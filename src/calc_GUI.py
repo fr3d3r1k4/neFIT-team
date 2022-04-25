@@ -231,14 +231,9 @@ button_minus.grid(row=3, column=7, padx=1, pady=1)
 
 # ========================== FOURTH ROW ===========================
 
-def sin():
+def log():
     wrong_input()
-    display_entry.insert(END, "sin(")
-
-
-def cos():
-    wrong_input()
-    display_entry.insert(END, "cos(")
+    display_entry.insert(END, "log(")
 
 
 def help_me():
@@ -264,12 +259,9 @@ def factorial():
     display_entry.insert(END, "!")
 
 
-# sin
-button_sin = Button(keyboard, bg=OPERATORS_COLOR, font=NUMBERS_FONT, text="log", command=log, height=1, width=7)
-button_sin.grid(row=4, column=1, padx=1, pady=1, columnspan=2)
-# cos
-#button_cos = Button(keyboard, bg=OPERATORS_COLOR, font=NUMBERS_FONT, text="log", command=cos, height=1, width=3)
-#button_cos.grid(row=4, column=2, padx=1, pady=1)
+# log
+button_log = Button(keyboard, bg=OPERATORS_COLOR, font=NUMBERS_FONT, text="log", command=log, height=1, width=7)
+button_log.grid(row=4, column=1, padx=1, pady=1, columnspan=2)
 # help
 button_help = Button(keyboard, bg=OPERATORS_COLOR, font=NUMBERS_FONT, text="?", command=help_me, height=1, width=3)
 button_help.grid(row=4, column=3, padx=1, pady=1)
