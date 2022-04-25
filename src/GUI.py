@@ -6,6 +6,7 @@
 
 import mathLibrary as mth
 
+# @brief Global functions used later in this code
 subtraction = ('+', '-',  '*', '/', '(', '')
 option = {'+': 2, '-': 2,  '*': 2, '/': 2, 'sin': 1, 'cos': 1, 'square': 2, '^': 2, '!': 1}
 operators = ['+', '-', '*', '/', '!', '^', '(', ')', 'square', 'sin', 'cos', ]
@@ -18,7 +19,9 @@ after = {'+': ('num', '-', '(', 'sin', 'cos', ), '-': ('num', '-', '(', 'sin', '
          '^', ')', ''), '(': ('num', '-', '(', '!', 'sin', 'cos', ), ')': ('+', '-', '*', '/', '^', '', ')', 'square'),
          'num': ('+', '-', '*', '/', '^', '', '!', ')', 'square'), 'square': '(', 'sin': '(', 'cos': '('}
 
-
+# @brief Checking if the input value is float or int
+# @param Value which needs to be converted
+# @return Returns value in int or float form 
 def number(value):
     if isinstance(value, int):
         return True
@@ -26,7 +29,9 @@ def number(value):
         return True
     return False
 
-
+# @brief Solving the input if the operator is one of mentioned below
+# @param Operators that are used and 2 inputs
+# @return 
 def solving_operands(operator, a, b):
     if operator == '+':
         return mth.addition(a, b)
