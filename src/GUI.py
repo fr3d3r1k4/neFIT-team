@@ -29,9 +29,11 @@ def number(value):
         return True
     return False
 
-# @brief Solving the input if the operator is one of mentioned below
-# @param Operators that are used and 2 inputs
-# @return 
+# @brief Solving the input if the operator with two operands is one of mentioned
+# @param Used operator that is string
+# @param First input that is int or float
+# @param Second input that is int or float
+# @return Solved functions from mathLibrary.py
 def solving_operands(operator, a, b):
     if operator == '+':
         return mth.addition(a, b)
@@ -42,36 +44,45 @@ def solving_operands(operator, a, b):
     elif operator == '/':
         return mth.division(a, b)
 
-
+# @brief Solving the input if the operator is one of mentioned
+# @param Used operator that is string
+# @param First input that is int or float
+# @return Solved functions from mathLibrary.py
 def solving_operands2(operator, a):
     return True
 
-
+# @brief Checking if the input value is numeric
+# @param Input value int or float
+# @return True if it is a numeric or False if not
 def is_numeric(value):
     return value.replace(".", "", 1).isnumeric
 
-
-def long_number(value):
+# @brief Checking if a string can be changed to int or float
+# @param Input value as a string
+# @return True if it can be changed and False if not
+def long_number(in_value):
     num = ""
     long = False
-    for i in range(len(value)):
-        if value[i].isdigit():
-            num += value[i]
-        elif value[i] == '.' and not long and num:
-            num += value[i]
+    for i in range(len(in_value)):
+        if in_value[i].isdigit():
+            num += in_value[i]
+        elif in_value[i] == '.' and not long and num:
+            num += in_value[i]
             long = True
         else:
             return False
     return True
 
-
-def tuple_string(in_string):
+# @brief Changing input string into tuple string
+# @param Input svalue as a string 
+# @return Changed string
+def tuple_string(in_value):
     global operators
     i = 0
     num_string = ""
     result = []
-    while i < len(in_string):
-        if in_string[i] in operators:
+    while i < len(in_value):
+        if in_value[i] in operators:
             if num_string and long_number(num_string):
                 if '.' in num_string:
                     result.append(float(num_string))
@@ -95,7 +106,9 @@ def tuple_string(in_string):
 
     return result
 
-
+# @brief Solving the value fromed on priority of option
+# @param Value as tuple
+# @return Solved tuple value
 def calculate_value(value):
     global option
     global subtraction
@@ -124,7 +137,9 @@ def calculate_value(value):
             i += 1
     return value
 
-
+# @brief Solving the equation formed on prioritised brackets
+# @param Value as tuple
+# @return Solved tuple value
 def brackets_first_second(value):
     brackets = False
     first_result = []
@@ -152,7 +167,9 @@ def brackets_first_second(value):
         i += 1
     return calculate_value(result)
 
-
+# @brief Checking if the input is written correctly
+# @param Value as tuple
+# @return True if the tuple value is written correctand False if not
 def repeating_symbols(value):
     counter = 0
     global before
@@ -177,7 +194,9 @@ def repeating_symbols(value):
         return False
     return True
 
-
+# @brief Solving the input values
+# @param Value as a string
+# @return Result as int or float
 def solve(value):
     value = tuple_string(value)
     if repeating_symbols(value) is False:
