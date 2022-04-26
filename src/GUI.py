@@ -8,16 +8,16 @@ import mathLibrary as mth
 
 # @brief Global functions used later in this code
 subtraction = ('+', '-',  '*', '/', '(', '')
-option = {'+': 2, '-': 2,  '*': 2, '/': 2, 'sin': 1, 'cos': 1, 'square': 2, '^': 2, '!': 1, 'log': 1}
-operators = ['+', '-', '*', '/', '!', '^', '(', ')', 'square', 'log']
+option = {'+': 2, '-': 2,  '*': 2, '/': 2, '^': 2, '!': 1, 'log': 1, '\u221A': 2}
+operators = ['+', '-', '*', '/', '!', '^', '(', ')', 'log', '\u221A']
 before = {'+': ('num', ')', '!'), '-': ('num', '(', ')', '+', '*', '/', '!', ''), '*': ('num', ')', '!'), '/': ('num',
-          ')', '!'), '^': ('num', ')'), '!': ('num', ')'), '(': ('+', '-', '*', '/', '^', '(', 'log'   '',
-          'square'), ')': ('num', ')', '!'), 'num': ('+', '-', '*', '/', '^', '(', ''), 'square': ('num', ')'), 'log':
-          ('+', '-', '*', '/', '^', '(' '',)}
-after = {'+': ('num', '-', '(', 'log'), '-': ('num', '-', '(', 'log'), '*': ('num', '-', '(', 'log'
-          ), '/': ('num', '-', '(', 'log'), '^': ('num', '(', 'log'), '!': ('+', '-', '*', '/',
-         '^', ')', ''), '(': ('num', '-', '(', '!', 'log'), ')': ('+', '-', '*', '/', '^', '', ')', 'square'),
-         'num': ('+', '-', '*', '/', '^', '', '!', ')', 'square'), 'square': '(', 'log': '('}
+          ')', '!'), '^': ('num', ')'), '!': ('num', ')'), '(': ('+', '-', '*', '/', '^', '(', 'log', '\u221A', ''),
+          ')': ('num', ')', '!'), 'num': ('+', '-', '*', '/', '^', '(', '', 'log', '\u221A'), 'log': ('num', '+', '-',
+          '*', '/', '^', '(', ''), '\u221A': ('num', ')')}
+after = {'+': ('num', '-', '(', 'log'), '-': ('num', '-', '(', 'log'), '*': ('num', '-', '(', 'log'), '/': ('num', '-',
+         '(', 'log'), '^': ('num', '(', 'log'), '!': ('+', '-', '*', '/',
+         '^', ')', ''), '(': ('num', '-', '(', '!', 'log'), ')': ('+', '-', '*', '/', '^', '', ')', '\u221A'),
+         'num': ('+', '-', '*', '/', '^', '', '!', ')', '\u221A'), 'log': ('num', '('), '\u221A': ('num', '(')}
 
 # @brief Checking if the input value is float or int
 # @param Value which needs to be converted
@@ -43,9 +43,9 @@ def solving_operands(operator, a, b):
         return mth.multiplication(a, b)
     elif operator == '/':
         return mth.division(a, b)
-    elif operator == 'x\u207f':
+    elif operator == '^':
         return mth.power(a, b)
-    elif operator == '\u207f√':
+    elif operator == '\u221A':
         return mth.rootMath(a, b)
 
 # @brief Solving the input if the operator is one of mentioned
