@@ -136,10 +136,10 @@ def plus():
     display_entry.insert(END, "+")
 
 
-# radical
-button_2_radical = Button(keyboard, bg=OPERATORS_COLOR, font=NUMBERS_FONT, text="\u207f√", command=radical, height=1,
+# n radical
+button_n_radical = Button(keyboard, bg=OPERATORS_COLOR, font=NUMBERS_FONT, text="\u207f√", command=radical, height=1,
                           width=3)
-button_2_radical.grid(row=2, column=1, padx=1, pady=1, columnspan=2)
+button_n_radical.grid(row=2, column=1, padx=1, pady=1, columnspan=2)
 # 4
 button_four = Button(keyboard, bg=NUMBERS_COLOR, font=NUMBERS_FONT, text="4", command=four, height=1, width=3)
 button_four.grid(row=2, column=3, padx=1, pady=1)
@@ -159,7 +159,7 @@ button_plus.grid(row=2, column=7, padx=1, pady=1)
 
 # ========================== THIRD ROW ===========================
 
-def square():
+def n_square():
     wrong_input()
     display_entry.insert(END, "^")
 
@@ -189,9 +189,9 @@ def minus():
     display_entry.insert(END, "-")
 
 
-# x^2
-button_2_square = Button(keyboard, bg=OPERATORS_COLOR, font=NUMBERS_FONT, text="x\u207f", command=square, height=1, width=3)
-button_2_square.grid(row=3, column=1, padx=1, pady=1, columnspan=2)
+# x^n
+button_n_square = Button(keyboard, bg=OPERATORS_COLOR, font=NUMBERS_FONT, text="x\u207f", command=square, height=1, width=3)
+button_n_square.grid(row=3, column=1, padx=1, pady=1, columnspan=2)
 # 1
 button_one = Button(keyboard, bg=NUMBERS_COLOR, font=NUMBERS_FONT, text="1", command=one, height=1, width=3)
 button_one.grid(row=3, column=3, padx=1, pady=1)
