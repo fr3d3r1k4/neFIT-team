@@ -1,14 +1,11 @@
-all: init run
+all: run
 
-init:
-	pip3 install -r requirements.txt
-
-run:	
+run: calc_GUI.py
 	python3 calc_GUI.py
 
 test: tests.py
-	python3 tests.py
+	pytest tests.py
 
 doc: Doxyfile
-	rm -rf ../documentationDoxy
+	rm -rf ../../doc
 	doxygen Doxyfile

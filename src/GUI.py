@@ -6,7 +6,7 @@
 
 import mathLibrary as mth
 
-# @brief Global functions used later in this code
+# Global functions used later in this code
 subtraction = ('+', '-',  '*', '/', '(', '')
 option = {'+': 2, '-': 2,  '*': 2, '/': 2, '^': 2, '!': 1, 'log': 1, '\u221A': 2}
 operators = ['+', '-', '*', '/', '!', '^', '(', ')', 'log', '\u221A']
@@ -19,7 +19,7 @@ after = {'+': ('num', '-', '(', 'log'), '-': ('num', '-', '(', 'log'), '*': ('nu
          '^', ')', ''), '(': ('num', '-', '(', '!', 'log'), ')': ('+', '-', '*', '/', '^', '', ')', '\u221A'),
          'num': ('+', '-', '*', '/', '^', '', '!', ')', '\u221A'), 'log': ('num', '(', ')'), '\u221A': ('num', '(')}
 
-# @brief Checking if the input value is float or int
+## @brief Checking if the input value is float or int
 # @param Value which needs to be converted
 # @return Returns value in int or float form
 def number(value):
@@ -29,7 +29,7 @@ def number(value):
         return True
     return False
 
-# @brief Solving the input if the operator with two operands is one of mentioned
+## @brief Solving the input if the operator with two operands is one of mentioned
 # @param Used operator that is string
 # @param First input that is int or float
 # @param Second input that is int or float
@@ -48,7 +48,7 @@ def solving_operands(operator, a, b):
     elif operator == '\u221A':
         return mth.rootMath(a, b)
 
-# @brief Solving the input if the operator is one of mentioned
+## @brief Solving the input if the operator is one of mentioned
 # @param Used operator that is string
 # @param First input that is int or float
 # @return Solved functions from mathLibrary.py
@@ -58,13 +58,13 @@ def solving_operands2(operator, a):
     elif operator == 'log(':
         return mth.log(a)
 
-# @brief Checking if the input value is numeric
+## @brief Checking if the input value is numeric
 # @param Input value int or float
 # @return True if it is a numeric or False if not
 def is_numeric(value):
     return value.replace(".", "", 1).isnumeric
 
-# @brief Checking if a string can be changed to int or float
+## @brief Checking if a string can be changed to int or float
 # @param Input value as a string
 # @return True if it can be changed and False if not
 def long_number(in_value):
@@ -80,7 +80,7 @@ def long_number(in_value):
             return False
     return True
 
-# @brief Changing input string into tuple string
+## @brief Changing input string into tuple string
 # @param Input value as a string
 # @return Changed string
 def tuple_string(in_string):
@@ -113,7 +113,7 @@ def tuple_string(in_string):
 
     return result
 
-# @brief Solving the value formed on priority of option
+## @brief Solving the value formed on priority of option
 # @param Value as tuple
 # @return Solved tuple value
 def calculate_value(value):
@@ -144,7 +144,7 @@ def calculate_value(value):
             i += 1
     return value
 
-# @brief Solving the equation formed on prioritised brackets
+## @brief Solving the equation formed on prioritised brackets
 # @param Value as tuple
 # @return Solved tuple value
 def brackets_first_second(value):
@@ -174,7 +174,7 @@ def brackets_first_second(value):
         i += 1
     return calculate_value(result)
 
-# @brief Checking if the input is written correctly
+## @brief Checking if the input is written correctly
 # @param Value as tuple
 # @return True if the tuple value is written correct and False if not
 def repeating_symbols(value):
@@ -201,7 +201,7 @@ def repeating_symbols(value):
         return False
     return True
 
-# @brief Solving the input values
+## @brief Solving the input values
 # @param Value as a string
 # @return Result as int or float
 def solve(value):
