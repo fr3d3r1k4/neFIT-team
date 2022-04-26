@@ -214,7 +214,7 @@ button_minus.grid(row=3, column=7, padx=1, pady=1)
 
 def log():
     wrong_input()
-    display_entry.insert(END, "log(")
+    display_entry.insert(END, "l")
 
 
 def help_me():
