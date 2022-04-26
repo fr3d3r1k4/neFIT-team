@@ -221,7 +221,22 @@ def help_me():
     wrong_input()
     help_button = Tk()
     help_button.title("Help Window")
-    help_window = Label(help_button, text="long help that i will do later")
+    help_window = Label(help_button, text="Pomoc:\n "
+                                          "Pokiaľ chcete vymazať celý príklad stlačte 'C' a pokiaľ len poslednú chybu\n"
+                                          "stlačte 'DEL'.\n\n"
+                                          "Pri počítaní jednoduchých operácií ako je '+,-,*,/' vám stačí\n"
+                                          " napísať prvé číslo, za ním bude nasledovať jeden z operandov a \n"
+                                          "nakoniec '='.\n\n "
+                                          " Pri počítaní faktoriálu zadajte vami zvolené číslo so znakom '!' a pre\n "
+                                          "zobrazenie výsledku, stlačte '='.\n\n"
+                                          " Pri umocňovaní, zadajte najprv základ mocniny (inak povedané aj\n "
+                                          "moctenec(x)), potom stlačte znak 'x^n' a nakoniec zadajte exponent (inak\n "
+                                          "povedané aj mocniteľ(n)). Pre zobrazenie výsledku, stlačte '='.\n\n"
+                                          " Pri odmocňovaní, zadajte najprv odmocniteľ (n) potom stlačte znak '√' a \n"
+                                          "nakoniec zadajte odmocnenec (x). Pre zobrazenie výsledku, stlačte '='.\n\n"
+                                          " Pri počítaní s logaritmom najprv stlačte znak 'log' a potom vložte vami\n "
+                                          "zvolené číslo. Pre zobrazenie výsledku, stlačte '='.")
+
     help_window.pack()
 
 
