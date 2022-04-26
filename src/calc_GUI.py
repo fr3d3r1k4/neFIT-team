@@ -137,7 +137,7 @@ def plus():
 
 
 # n radical
-button_n_radical = Button(keyboard, bg=OPERATORS_COLOR, font=NUMBERS_FONT, text="\u207f√", command=radical, height=1,
+button_n_radical = Button(keyboard, bg=OPERATORS_COLOR, font=NUMBERS_FONT, text="x\u207f√", command=radical, height=1,
                           width=3)
 button_n_radical.grid(row=2, column=1, padx=1, pady=1, columnspan=2)
 # 4
