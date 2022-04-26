@@ -34,7 +34,7 @@ def equals():
     entry = display_entry.get()
     entry = GUI.solve(entry)
     if entry is False:
-        entry = "Invalid input. Press "?" for more help"
+        entry = "Invalid input. Press '?' for more help"
     display_entry.delete(0, END)
     display_entry.insert(0, str(entry))
 
