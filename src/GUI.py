@@ -206,9 +206,9 @@ def repeating_symbols(value):
 # @return Result as int or float
 def solve(value):
     value = tuple_string(value)
-    if repeating_symbols(value) is False:
-        return False
     if value is False:
+        return False
+    if repeating_symbols(value) is False:
         return False
     value = brackets_first_second(value)
     if value is False:
