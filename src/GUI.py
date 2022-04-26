@@ -43,6 +43,10 @@ def solving_operands(operator, a, b):
         return mth.multiplication(a, b)
     elif operator == '/':
         return mth.division(a, b)
+    elif operator == 'x\u207f':
+        return mth.power(a, b)
+    elif operator == '\u207f√':
+        return mth.rootMath(a, b)
 
 # @brief Solving the input if the operator is one of mentioned
 # @param Used operator that is string
@@ -51,10 +55,6 @@ def solving_operands(operator, a, b):
 def solving_operands2(operator, a):
     if operator == '!':
         return mth.factorial(a)
-    elif operator == 'x\u207f':
-        return mth.power(a, b)
-    elif operator == '\u207f√':
-        return mth.rootMath(a, b)
     elif operator == 'log(':
         return mth.log(a)
 
