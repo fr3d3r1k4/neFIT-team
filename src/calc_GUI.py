@@ -222,6 +222,9 @@ def help_me():
     help_button = Tk()
     help_button.title("Help Window")
     help_window = Label(help_button, text="Pomoc:\n "
+                                          " Kalkulačka sa ovláda myšou, no môžete používať aj priamy vstup z\n "
+                                          "klávesnice.\n\n"
+                                          "Počítanie v kalkulačke:\n"
                                           "Pokiaľ chcete vymazať celý príklad stlačte 'C' a pokiaľ len poslednú chybu\n"
                                           "stlačte 'DEL'.\n\n"
                                           "Pri počítaní jednoduchých operácií ako je '+,-,*,/' vám stačí\n"
