@@ -46,7 +46,7 @@ def solving_operands(operator, a, b):
     elif operator == '^':
         return mth.power(a, b)
     elif operator == '\u221A':
-        return mth.rootMath(a, b)
+        return mth.rootMath(b, a)
 
 ## @brief Solving the input if the operator is one of mentioned
 # @param Used operator that is string
