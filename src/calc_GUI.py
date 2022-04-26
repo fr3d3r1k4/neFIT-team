@@ -190,7 +190,7 @@ def minus():
 
 
 # x^n
-button_n_square = Button(keyboard, bg=OPERATORS_COLOR, font=NUMBERS_FONT, text="x\u207f", command=square, height=1, width=3)
+button_n_square = Button(keyboard, bg=OPERATORS_COLOR, font=NUMBERS_FONT, text="x\u207f", command=n_square, height=1, width=3)
 button_n_square.grid(row=3, column=1, padx=1, pady=1, columnspan=2)
 # 1
 button_one = Button(keyboard, bg=NUMBERS_COLOR, font=NUMBERS_FONT, text="1", command=one, height=1, width=3)
