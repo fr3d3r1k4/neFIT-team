@@ -49,7 +49,14 @@ def solving_operands(operator, a, b):
 # @param First input that is int or float
 # @return Solved functions from mathLibrary.py
 def solving_operands2(operator, a):
-    return True
+    if operator == '!':
+        return mth.factorial(a)
+    elif operator == 'x\u207f':
+        return mth.power(a, b)
+    elif operator == '\u207f√':
+        return mth.rootMath(a, b)
+    elif operator == 'log(':
+        return mth.log(a)
 
 # @brief Checking if the input value is numeric
 # @param Input value int or float
