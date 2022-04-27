@@ -10,10 +10,12 @@ import math
 
 ##
 # @brief Addition of two numbers
-# @param a First adddend
+# @param a First addend
 # @param b Second addend
 # 
 # @return Sum of two numbers a, b
+
+
 def addition(a, b):
     result: float = 0.0
     result = float(a) + float(b)
@@ -22,12 +24,12 @@ def addition(a, b):
 
 
 ##
-# @brief Substraction of two numbers 
+# @brief Subtraction of two numbers
 #
-# @param a First substractor
-# @param b Second Substractor
+# @param a First subtractor
+# @param b Second Subtractor
 #
-#@return Diff of two numbers
+# @return Diff of two numbers
 def subtraction(a, b):
     result: float = 0.0
     result = float(a) - float(b)
@@ -97,7 +99,7 @@ def factorial(n):
 # @brief Power by natural exponent
 #
 # @param n The base
-# @param m Exponenet
+# @param m Exponent
 #
 # @exception Input number is lesser than 0
 # @exception Input number is not an integer
@@ -121,12 +123,12 @@ def power(n, m):
 # @param m Exponent
 #
 # @exception Input number is 0
-# @exception Input number is lesser than 0 and exponent is mulptiplier of 2
+# @exception Input number is lesser than 0 and exponent is multiplier of 2
 #
 # @return Nth root with positive base 
 # @return Nth root with negative base
 def rootMath(n, m):
-    if n == 0 or (n % 2 == 0 and n < 0):
+    if n % 2 == 0 and n < 0:
         raise ValueError ("Math Error")
     elif n > 0:
         return n **(m**-1)
