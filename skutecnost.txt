@@ -1,1 +1,12 @@
-tento soubor bude obsahovat rozdil mezi planem projektu a skutecnosti
+Rozdiely medzi plánom a skutočnosťou:
+	
+	- S dodržaním TDD sme mali trochu problém, keďže člen tímu, ktorý mal na starosti testy ukončil štúdium
+	a preto sa kód pre GUI a matematickú knižnicu začali písať skôr. Testy sa začali písať až po implementácii
+	základaných matematických operácii (sčitanie, odčítanie) a postupne sa dorábali v procese tvorby celej mat.
+	knižnice. Snažili sme sa však mať test vždy hotový skôr, ako sa napísala funkcia operácie.
+	
+	- Rozdelenie úloh sa takisto úplne vzorne nedodržalo, keďže sa počas procesu vývoja natrafilo na problémy,
+	ktoré sme v plánovaní nevedeli predvídať a výpadok člena tímu takisto nepomohol situácii.
+
+	- Časový plán sa dodržiaval takisto ťažšie ale nakoniec sa veci stihli, niektoré však povrchnejšie ako sme
+	plánovali.
