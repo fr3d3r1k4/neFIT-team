@@ -18,9 +18,9 @@ profile: profiling.py
 	python3 profiling.py
 
 clean:
-	rm -rf ../__pycache__
-	rm -rf ../.pytest_cache
-	rm -rf ../../.idea
+	rm -rf __pycache__
+	rm -rf .pytest_cache
+	rm -rf ../.idea
 
 pack: clean doc
-	zip -r ../../../xdurac01_xkmeto00_xplank03_xjanco03.zip ../../../xdurac01_xkmeto00_xplank03_xjanco03
+	zip -r ../../../xdurac01_xkmeto00_xplank03_xjanco03.zip ../../repo ../../doc
