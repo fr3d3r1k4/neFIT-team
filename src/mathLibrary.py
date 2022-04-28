@@ -3,9 +3,6 @@
 #   @author ROMANA DURACIOVA, FILIP PLANKA
 #   @date   2022-04-28
 
-
-from ast import Param
-from distutils.log import error
 import math
 
 ##
@@ -17,7 +14,6 @@ import math
 
 
 def addition(a, b):
-    result: float = 0.0
     result = float(a) + float(b)
     return result
 
@@ -30,7 +26,6 @@ def addition(a, b):
 #
 # @return Diff of two numbers
 def subtraction(a, b):
-    result: float = 0.0
     result = float(a) - float(b)
     return result
 
@@ -43,7 +38,6 @@ def subtraction(a, b):
 #
 # @return Multiplication of two numbers
 def multiplication(a, b):
-    result: float = 0.0
     result = float(a) * float(b)
     return result
 
@@ -61,7 +55,7 @@ def division(a, b):
     if b == 0:
         raise ZeroDivisionError("Division by zero!")
     else:
-        result: float = 0.0
+        # result: float = 0.0
         result = float(a) / float(b)
         return result
 
@@ -77,6 +71,7 @@ def division(a, b):
 # @return Factorial of 0 or 1
 # @return Factorial of a positive integer n
 def factorial(n):
+    fact = 0
     if n < 0 or isinstance(n, float):
         raise ValueError("Math Error")
     if n == 0 or n == 1:
