@@ -857,6 +857,7 @@ INPUT_ENCODING         = UTF-8
 # *.vhdl, *.ucf, *.qsf and *.ice.
 
 FILE_PATTERNS          = *.py \
+                        *.txt \
                                              
 
 # The RECURSIVE tag can be used to specify whether or not subdirectories should
