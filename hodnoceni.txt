@@ -1,4 +1,4 @@
 xdurac01 155 (základné mat. operácie, testy, dokumentácia (Doxygen), Makefile, Doxyfile, inštalátor)
 xkmeto00 140 (GUI, linkovanie s GUI, dokumentácia, užívateľská príručka, ikonka aplikácie)
-xplank03 100 (profiling, pokročilé mat. operácie)
+xplank03 100 (profiling, pokročilé mat. operácie, testy)
 xjanco03 5  (README)

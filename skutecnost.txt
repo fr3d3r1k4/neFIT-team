@@ -4,9 +4,13 @@ Rozdiely medzi plánom a skutočnosťou:
 	a preto sa kód pre GUI a matematickú knižnicu začali písať skôr. Testy sa začali písať až po implementácii
 	základaných matematických operácii (sčitanie, odčítanie) a postupne sa dorábali v procese tvorby celej mat.
 	knižnice. Snažili sme sa však mať test vždy hotový skôr, ako sa napísala funkcia operácie.
+
+	- Jeden z členov tímu mal problém s pushovaním programov na github, čo sa riešilo preposielaním inému členovi
+	tímu, ktorý následne pushol zmeny za neho. Tento problém sa neskôr vyriešil zmenou IDE.
 	
 	- Rozdelenie úloh sa takisto úplne vzorne nedodržalo, keďže sa počas procesu vývoja natrafilo na problémy,
 	ktoré sme v plánovaní nevedeli predvídať a výpadok člena tímu takisto nepomohol situácii.
 
 	- Časový plán sa dodržiaval takisto ťažšie ale nakoniec sa veci stihli, niektoré však povrchnejšie ako sme
-	plánovali.
+	plánovali. Profiling sme nedokázali kompletne dotiahnuť do konca, kvôli časovej tiesni, tak sme ho neodovzdali 
+	vôbec.
